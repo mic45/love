@@ -1,0 +1,2543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Base -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>
+    if (window.location.pathname.endsWith('quiz.html')) {
+      window.location.replace('/?tab=quiz');
+    }
+  </script>
+
+  <!-- SEO principal -->
+  <title>Quiz de Compatibilité Amoureuse - 15 Questions | LoveQuiz</title>
+  <meta name="description" content="Répondez à 15 questions pour évaluer votre compatibilité amoureuse. Quiz gratuit, privé et basé sur la recherche en psychologie.">
+  <meta name="keywords" content="compatibilité amoureuse, quiz couple, test relation, amour, psychologie couple">
+  <meta name="author" content="LoveQuiz">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.lovequiz.com/quiz.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quiz de Compatibilité Amoureuse - 15 Questions | LoveQuiz">
+  <meta property="og:description" content="Répondez à 15 questions pour évaluer votre compatibilité amoureuse. Quiz gratuit, privé et basé sur la recherche en psychologie.">
+  <meta property="og:image" content="https://www.lovequiz.com/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://www.lovequiz.com/quiz.html">
+  <meta property="og:site_name" content="LoveQuiz">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quiz de Compatibilité Amoureuse - 15 Questions | LoveQuiz">
+  <meta name="twitter:description" content="Répondez à 15 questions pour évaluer votre compatibilité amoureuse. Quiz gratuit, privé et basé sur la recherche en psychologie.">
+  <meta name="twitter:image" content="https://www.lovequiz.com/assets/img/og-image.jpg">
+
+  <!-- Preconnect pour performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Preload police critique -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LoveQuiz",
+    "url": "https://www.lovequiz.com/",
+    "description": "Test de compatibilité amoureuse gratuit basé sur la psychologie",
+    "inLanguage": ["fr-FR", "en-US"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.lovequiz.com/blog.html?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Schema.org Quiz -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "Test de Compatibilité Amoureuse",
+    "description": "Quiz de 15 questions pour évaluer la compatibilité d'un couple",
+    "educationalLevel": "Grand public",
+    "learningResourceType": "Quiz",
+    "timeRequired": "PT5M",
+    "inLanguage": ["fr-FR", "en-US"]
+  }
+  </script>
+
+  <!-- Schema.org FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Le quiz LoveQuiz est-il gratuit ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, le quiz est 100% gratuit et sans inscription."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mes données sont-elles privées ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, toutes les données restent sur votre appareil (localStorage). Aucune donnée n'est envoyée à un serveur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps prend le quiz ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le quiz prend environ 5 minutes avec 15 questions."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://www.lovequiz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Quiz",
+        "item": "https://www.lovequiz.com/quiz.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --coral: #FF6B8A;
+      --coral-hover: #E8556F;
+      --powder: #FFE4EC;
+      --light-pink: #FFF0F3;
+      --pastel-yellow: #FFF4D6;
+      --pastel-blue: #D6F0FF;
+      --off-white: #FFFBF7;
+      --deep-black: #1A1A1A;
+      --text-gray: #555555;
+      --border-gray: #E5E7EB;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--off-white);
+      color: var(--deep-black);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Top banner */
+    .top-banner {
+      background-color: var(--powder);
+      color: var(--coral);
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(255, 107, 138, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 251, 247, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--powder);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--powder);
+      border: 1px solid rgba(255, 107, 138, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--coral);
+    }
+    .brand-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--deep-black);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .brand-name span {
+      color: var(--coral);
+    }
+    .brand-sub {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: rgba(255, 107, 138, 0.85);
+      display: block;
+    }
+
+    nav.desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-gray);
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--coral);
+      font-weight: 600;
+    }
+    .pill-tag {
+      background: var(--powder);
+      color: var(--coral);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 107, 138, 0.25);
+      background: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .lang-btn:hover {
+      background: var(--light-pink);
+    }
+
+    /* Primary & Secondary Buttons */
+    .btn-primary {
+      background-color: var(--coral);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      box-shadow: 0 4px 14px rgba(255, 107, 138, 0.3);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .btn-primary:hover:not(:disabled) {
+      background-color: var(--coral-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 107, 138, 0.45);
+    }
+    .btn-primary:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .btn-secondary {
+      background-color: #fff;
+      color: var(--coral);
+      border: 2px solid var(--coral);
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 10px 24px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+    .btn-secondary:hover {
+      background-color: var(--light-pink);
+      transform: translateY(-2px);
+    }
+
+    .btn-neutral {
+      background-color: #F3F4F6;
+      color: var(--deep-black);
+      border: 1px solid #E5E7EB;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 26px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-neutral:hover:not(:disabled) {
+      background-color: #E5E7EB;
+      transform: translateY(-2px);
+    }
+    .btn-neutral:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* Floating shapes animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(4deg); }
+    }
+    @keyframes floatRev {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(-4deg); }
+    }
+    .animate-float { animation: float 3.5s ease-in-out infinite; }
+    .animate-float-rev { animation: floatRev 4.5s ease-in-out infinite; }
+
+    /* Sections container */
+    .quiz-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      position: relative;
+    }
+
+    /* SECTION 1: INTRO */
+    #section-intro {
+      text-align: center;
+      padding: 20px 0 40px;
+      position: relative;
+    }
+    .intro-badge {
+      display: inline-block;
+      background: var(--powder);
+      color: var(--coral);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .intro-title {
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: var(--deep-black);
+    }
+    .intro-title span {
+      color: var(--coral);
+    }
+    .intro-subtitle {
+      font-size: 18px;
+      color: var(--text-gray);
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+    .illustration-wrapper {
+      max-width: 440px;
+      margin: 0 auto 36px;
+    }
+    .badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .info-badge {
+      padding: 12px 22px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-blue { background: var(--pastel-blue); color: #1E40AF; }
+    .badge-yellow { background: var(--pastel-yellow); color: #B45309; }
+    .badge-pink { background: var(--powder); color: var(--coral); }
+
+    .cta-intro {
+      padding: 16px 44px;
+      font-size: 18px;
+    }
+
+    /* Floating shapes */
+    .shape-heart-1 {
+      position: absolute;
+      top: 10px;
+      left: -40px;
+      font-size: 32px;
+      color: var(--coral);
+      opacity: 0.6;
+    }
+    .shape-star-1 {
+      position: absolute;
+      top: 80px;
+      right: -20px;
+      font-size: 28px;
+      color: #F59E0B;
+      opacity: 0.7;
+    }
+    .shape-heart-2 {
+      position: absolute;
+      bottom: 20px;
+      right: -10px;
+      font-size: 24px;
+      color: var(--coral);
+      opacity: 0.5;
+    }
+
+    /* SECTION 2: CONFIGURATION */
+    #section-config {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    .config-card {
+      max-width: 500px;
+      margin: 20px auto 0;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid var(--powder);
+      padding: 40px;
+      text-align: left;
+    }
+    .config-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .config-sub {
+      font-size: 14px;
+      color: var(--text-gray);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--deep-black);
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border-gray);
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--deep-black);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-control:focus {
+      border-color: var(--coral);
+      box-shadow: 0 0 0 3px rgba(255, 107, 138, 0.15);
+    }
+    .resume-box {
+      background: var(--light-pink);
+      border: 1px dashed var(--coral);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* SECTION 3: QUESTIONS SCREEN */
+    #section-questions {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeIn 0.3s ease;
+    }
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: #777;
+      margin-bottom: 10px;
+    }
+    .cat-badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--powder);
+      color: var(--coral);
+    }
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: #E0E0E0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--coral);
+      width: 6.66%;
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+
+    .question-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid var(--powder);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .question-badge-circle {
+      width: 48px;
+      height: 48px;
+      background: var(--coral);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 auto 18px;
+      box-shadow: 0 4px 10px rgba(255, 107, 138, 0.3);
+    }
+    .question-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--deep-black);
+      line-height: 1.35;
+      margin-bottom: 32px;
+    }
+
+    /* 2x2 Options Grid */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      text-align: left;
+    }
+    .option-card {
+      background: #fff;
+      border: 2px solid #EAEAEA;
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .option-card:hover {
+      border-color: var(--coral);
+      background: var(--light-pink);
+      transform: translateY(-2px);
+    }
+    .option-card.selected {
+      border: 3px solid var(--coral);
+      background: var(--light-pink);
+      padding: 19px;
+    }
+    .option-icon {
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+    .option-text {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--deep-black);
+      line-height: 1.4;
+    }
+    .check-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      background: var(--coral);
+      color: #fff;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .option-card.selected .check-icon {
+      display: flex;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    /* SECTION 4: RESULTS SCREEN */
+    #section-results {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      animation: fadeIn 0.4s ease;
+    }
+    .results-hero {
+      background: linear-gradient(180deg, var(--powder) 0%, #ffffff 100%);
+      border-radius: 24px;
+      padding: 40px 24px;
+      border: 1px solid var(--powder);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      margin-bottom: 30px;
+    }
+    .svg-circle-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 20px;
+    }
+    .svg-circle-container svg {
+      transform: rotate(-90deg);
+    }
+    .circle-bg {
+      fill: none;
+      stroke: #E5E7EB;
+      stroke-width: 12px;
+    }
+    .circle-progress {
+      fill: none;
+      stroke: var(--coral);
+      stroke-width: 12px;
+      stroke-linecap: round;
+      stroke-dasharray: 502.65;
+      stroke-dashoffset: 502.65;
+      transition: stroke-dashoffset 1.8s ease-out, stroke 0.4s ease;
+    }
+    .circle-text-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .score-percent {
+      font-size: 58px;
+      font-weight: 700;
+      color: var(--coral);
+      line-height: 1;
+    }
+    .results-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .results-couple-names {
+      font-size: 16px;
+      color: var(--text-gray);
+      font-weight: 500;
+    }
+
+    /* Category progress bars */
+    .categories-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid var(--powder);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .cat-row {
+      margin-bottom: 18px;
+    }
+    .cat-row:last-child {
+      margin-bottom: 0;
+    }
+    .cat-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .cat-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: #E0E0E0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .cat-bar-fill {
+      height: 100%;
+      background: var(--coral);
+      width: 0%;
+      border-radius: 4px;
+      transition: width 1s ease-out;
+    }
+
+    /* Textual interpretation */
+    .interp-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid var(--powder);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    .interp-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .interp-msg {
+      font-size: 15px;
+      color: var(--text-gray);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .interp-lists {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .list-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .item-list {
+      list-style: none;
+      font-size: 13px;
+      color: var(--text-gray);
+    }
+    .item-list li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    /* 4 action buttons */
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .action-btn {
+      padding: 12px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .action-restart {
+      background: #F3F4F6;
+      color: var(--deep-black);
+      border: 1px solid #E5E7EB;
+    }
+    .action-restart:hover {
+      background: #E5E7EB;
+    }
+    .action-share {
+      background: var(--coral);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 12px rgba(255, 107, 138, 0.3);
+    }
+    .action-share:hover {
+      background: var(--coral-hover);
+      transform: translateY(-2px);
+    }
+    .action-outline {
+      background: #fff;
+      border: 2px solid var(--coral);
+      color: var(--coral);
+    }
+    .action-outline:hover {
+      background: var(--light-pink);
+    }
+
+    /* SECTION 5: POURQUOI CES QUESTIONS */
+    .why-section {
+      background: #fff;
+      padding: 80px 20px;
+      border-top: 1px solid var(--powder);
+    }
+    .why-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .why-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: var(--deep-black);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+    }
+    .why-card {
+      background: var(--off-white);
+      border: 1px solid var(--powder);
+      border-radius: 16px;
+      padding: 30px;
+      transition: transform 0.25s;
+    }
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    }
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+    .why-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 14px;
+      color: var(--text-gray);
+      line-height: 1.5;
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--deep-black);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 100;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--deep-black);
+      color: #fff;
+      padding: 60px 20px 30px;
+      border-top: 1px solid #333;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #2A2A2A;
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .footer-col p {
+      font-size: 13px;
+      color: #AAA;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: #AAA;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--coral);
+    }
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #2A2A2A;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      font-size: 14px;
+    }
+    .social-icon:hover {
+      background: var(--coral);
+    }
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .newsletter-input {
+      padding: 10px 14px;
+      border-radius: 30px;
+      border: 1px solid #444;
+      background: #2A2A2A;
+      color: #fff;
+      font-size: 12px;
+      font-family: inherit;
+      outline: none;
+    }
+    .newsletter-input:focus {
+      border-color: var(--coral);
+    }
+    .footer-bottom {
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #777;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .intro-title { font-size: 32px; }
+      .intro-subtitle { font-size: 16px; }
+      .options-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .actions-grid { grid-template-columns: 1fr 1fr; }
+      .interp-lists { grid-template-columns: 1fr; }
+      .svg-circle-container { width: 160px; height: 160px; }
+      .score-percent { font-size: 46px; }
+      .config-card, .question-card { padding: 24px 18px; }
+      nav.desktop-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Notification -->
+  <div class="top-banner">
+    <span class="animate-float">✨</span>
+    <span data-i18n="topBanner">Édition Spéciale Couple 2026 : Le test de compatibilité complet est 100% gratuit !</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" id="header-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <div>
+          <div class="brand-name">Love<span>Quiz</span></div>
+          <span class="brand-sub">MatchMaker Edition</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link" data-i18n="navHome">Accueil</a>
+        <a href="quiz.html" class="nav-link active">
+          <span data-i18n="navQuiz">Quiz de couple</span>
+          <span class="pill-tag">Top</span>
+        </a>
+        <a href="tools.html" class="nav-link" data-i18n="navTools">Outils d’amour</a>
+        <a href="blog.html" class="nav-link" data-i18n="navBlog">Blog</a>
+        <a href="about.html" class="nav-link" data-i18n="navAbout">À propos</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="lang-toggle-btn" class="lang-btn" title="Changer de langue">
+          <span id="lang-flag">🇫🇷</span>
+          <span id="lang-code">FR</span>
+          <span style="font-size: 10px; color: #666;">| <span data-i18n="langSwitch">EN</span></span>
+        </button>
+        <button id="header-quiz-btn" class="btn-primary" style="display: none;">
+          <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <span data-i18n="headerCta">Lancer le test</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <!-- Floating geometric decorations -->
+    <div class="shape-heart-1 animate-float">❤️</div>
+    <div class="shape-star-1 animate-float-rev">✨</div>
+    <div class="shape-heart-2 animate-float">💖</div>
+
+    <!-- ==================== SECTION 1 : INTRO ==================== -->
+    <section id="section-intro">
+      <div class="intro-badge" data-i18n="introBadge">Diagnostic Relationnel Certifié</div>
+      <h1 class="intro-title">
+        <span data-i18n="introTitle1">Test de</span>
+        <span class="text-coral" data-i18n="introTitleHighlight">Compatibilité</span>
+        <span data-i18n="introTitle2">Amoureuse</span>
+      </h1>
+      <p class="intro-subtitle" data-i18n="introSubtitle">
+        15 questions pour évaluer votre connexion, sonder vos dynamiques et révéler les trésors de votre complicité.
+      </p>
+
+      <!-- MatchMaker Couple with Questionnaire Flat Illustration -->
+      <div class="illustration-wrapper animate-float">
+        <svg viewBox="0 0 460 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <!-- Pastel background circle & shadow -->
+          <ellipse cx="230" cy="245" rx="190" ry="20" fill="#FFE4EC" />
+          <circle cx="230" cy="140" r="110" fill="#FFF0F3" />
+          
+          <!-- Character 1 (Left - Camille) -->
+          <g id="char-left">
+            <ellipse cx="140" cy="225" rx="38" ry="42" fill="#D6F0FF" stroke="#1A1A1A" stroke-width="2.5" />
+            <path d="M125 185 Q140 180 155 185" stroke="#1A1A1A" stroke-width="2.5" fill="none" />
+            <!-- Head -->
+            <circle cx="140" cy="130" r="28" fill="#FFF8F0" stroke="#1A1A1A" stroke-width="2.5" />
+            <!-- Brown hair -->
+            <path d="M112 135 C110 100 145 92 165 110 C172 120 168 140 162 145 C158 130 150 115 130 118 C118 120 115 130 112 135 Z" fill="#7C4A27" stroke="#1A1A1A" stroke-width="2.5" />
+            <!-- Eyes & smile -->
+            <path d="M132 132 Q136 135 140 132" stroke="#1A1A1A" stroke-width="2" fill="none" />
+            <path d="M144 132 Q148 135 152 132" stroke="#1A1A1A" stroke-width="2" fill="none" />
+            <path d="M136 142 Q142 147 148 142" stroke="#FF6B8A" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            <!-- Blush -->
+            <circle cx="128" cy="138" r="4" fill="#FF6B8A" opacity="0.3" />
+            <circle cx="152" cy="138" r="4" fill="#FF6B8A" opacity="0.3" />
+          </g>
+
+          <!-- Clipboard with Quiz questionnaire -->
+          <g id="clipboard" transform="translate(190, 100)">
+            <rect x="0" y="8" width="80" height="110" rx="8" fill="#FFFBF7" stroke="#1A1A1A" stroke-width="2.5" />
+            <rect x="25" y="0" width="30" height="12" rx="3" fill="#D6F0FF" stroke="#1A1A1A" stroke-width="2.5" />
+            <circle cx="40" cy="5" r="3" fill="#FF6B8A" />
+            <!-- Form lines -->
+            <line x1="14" y1="28" x2="66" y2="28" stroke="#FF6B8A" stroke-width="3" stroke-linecap="round" />
+            <rect x="14" y="42" width="10" height="10" rx="2" fill="#FFE4EC" stroke="#1A1A1A" stroke-width="1.5" />
+            <line x1="30" y1="47" x2="66" y2="47" stroke="#555" stroke-width="2" stroke-linecap="round" />
+            <path d="M15 47 L19 50 L24 43" stroke="#FF6B8A" stroke-width="2" fill="none" stroke-linecap="round" />
+            
+            <rect x="14" y="60" width="10" height="10" rx="2" fill="#FFE4EC" stroke="#1A1A1A" stroke-width="1.5" />
+            <line x1="30" y1="65" x2="66" y2="65" stroke="#555" stroke-width="2" stroke-linecap="round" />
+            <path d="M15 65 L19 68 L24 61" stroke="#FF6B8A" stroke-width="2" fill="none" stroke-linecap="round" />
+
+            <rect x="14" y="78" width="10" height="10" rx="2" fill="#FFF" stroke="#1A1A1A" stroke-width="1.5" />
+            <line x1="30" y1="83" x2="66" y2="83" stroke="#CCC" stroke-width="2" stroke-linecap="round" />
+
+            <circle cx="40" cy="102" r="6" fill="#FF6B8A" />
+            <path d="M38 102 L40 104 L43 100" stroke="#FFF" stroke-width="1.5" fill="none" />
+          </g>
+
+          <!-- Character 2 (Right - Julien) -->
+          <g id="char-right">
+            <ellipse cx="320" cy="225" rx="38" ry="42" fill="#FFF4D6" stroke="#1A1A1A" stroke-width="2.5" />
+            <path d="M305 185 Q320 180 335 185" stroke="#1A1A1A" stroke-width="2.5" fill="none" />
+            <!-- Head -->
+            <circle cx="320" cy="130" r="28" fill="#FFF8F0" stroke="#1A1A1A" stroke-width="2.5" />
+            <!-- Dark wavy hair -->
+            <path d="M292 125 C295 98 335 92 348 112 C352 118 348 135 342 140 C340 125 330 112 310 115 C298 116 295 120 292 125 Z" fill="#2D3748" stroke="#1A1A1A" stroke-width="2.5" />
+            <!-- Eyes & smile -->
+            <path d="M308 132 Q312 135 316 132" stroke="#1A1A1A" stroke-width="2" fill="none" />
+            <path d="M324 132 Q328 135 332 132" stroke="#1A1A1A" stroke-width="2" fill="none" />
+            <path d="M312 142 Q320 148 328 142" stroke="#FF6B8A" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            <!-- Blush -->
+            <circle cx="304" cy="138" r="4" fill="#FF6B8A" opacity="0.3" />
+            <circle cx="334" cy="138" r="4" fill="#FF6B8A" opacity="0.3" />
+            <!-- Pencil in hand -->
+            <line x1="280" y1="160" x2="265" y2="140" stroke="#FF6B8A" stroke-width="3.5" stroke-linecap="round" />
+            <polygon points="265,140 262,136 268,138" fill="#1A1A1A" />
+          </g>
+
+          <!-- Floating Hearts -->
+          <g transform="translate(230, 45)">
+            <path d="M0 12 L-8 4 C-14 -2 -10 -10 -2 -10 C3 -10 0 -6 0 -4 C0 -6 -3 -10 2 -10 C10 -10 14 -2 8 4 Z" fill="#FF6B8A" />
+          </g>
+          <g transform="translate(180, 70) scale(0.6)">
+            <path d="M0 12 L-8 4 C-14 -2 -10 -10 -2 -10 C3 -10 0 -6 0 -4 C0 -6 -3 -10 2 -10 C10 -10 14 -2 8 4 Z" fill="#FF6B8A" opacity="0.7" />
+          </g>
+          <g transform="translate(280, 65) scale(0.65)">
+            <path d="M0 12 L-8 4 C-14 -2 -10 -10 -2 -10 C3 -10 0 -6 0 -4 C0 -6 -3 -10 2 -10 C10 -10 14 -2 8 4 Z" fill="#FF6B8A" opacity="0.8" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- 3 Informative Badges -->
+      <div class="badges-row">
+        <div class="info-badge badge-blue">
+          <span>⏱️</span>
+          <span data-i18n="badge1">5 minutes</span>
+        </div>
+        <div class="info-badge badge-yellow">
+          <span>❓</span>
+          <span data-i18n="badge2">15 questions</span>
+        </div>
+        <div class="info-badge badge-pink">
+          <span>🔒</span>
+          <span data-i18n="badge3">100% privé</span>
+        </div>
+      </div>
+
+      <button id="btn-start-intro" class="btn-primary cta-intro">
+        <span data-i18n="btnStart">Commencer le quiz</span>
+        <span>→</span>
+      </button>
+    </section>
+
+    <!-- ==================== SECTION 2 : CONFIGURATION ==================== -->
+    <section id="section-config">
+      <div class="config-card">
+        <h2 class="config-title" data-i18n="configTitle">Personnalisez votre test</h2>
+        <p class="config-sub" data-i18n="configSubtitle">Indiquez vos prénoms pour adapter les résultats et le rapport d’harmonie.</p>
+
+        <!-- Saved progress banner if available -->
+        <div id="resume-banner" class="resume-box" style="display: none;">
+          <div>
+            <span>💾 </span>
+            <span id="resume-text">Session précédente trouvée (Question 4/15).</span>
+          </div>
+          <button id="btn-resume-session" class="btn-primary" style="padding: 6px 14px; font-size: 12px;" data-i18n="btnResume">Reprendre</button>
+        </div>
+
+        <form id="config-form">
+          <div class="form-group">
+            <label for="input-name-1" data-i18n="labelName1">Votre prénom</label>
+            <input type="text" id="input-name-1" class="form-control" placeholder="Ex: Sarah" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="input-name-2" data-i18n="labelName2">Prénom de votre partenaire</label>
+            <input type="text" id="input-name-2" class="form-control" placeholder="Ex: Julien" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="select-relation" data-i18n="labelRelation">Type de relation</label>
+            <select id="select-relation" class="form-control">
+              <option value="couple" data-i18n="relCouple">En couple</option>
+              <option value="dating" data-i18n="relDating">Dating (début de relation)</option>
+              <option value="married" data-i18n="relMarried">Marié·e</option>
+              <option value="curious" data-i18n="relCurious">Curieux·se (crush / célibataire)</option>
+            </select>
+          </div>
+
+          <div style="text-align: center; margin-top: 28px;">
+            <button type="submit" id="btn-submit-config" class="btn-primary cta-intro" disabled style="width: 100%;">
+              <span data-i18n="btnStartQuestions">Lancer les questions</span>
+              <span>→</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 : ÉCRAN DE QUESTIONS ==================== -->
+    <section id="section-questions">
+      <!-- Top Progress Bar -->
+      <div class="progress-header">
+        <div>
+          <span data-i18n="progressLabel">Question</span>
+          <strong id="q-curr-num" style="color: var(--coral);">1</strong>
+          <span data-i18n="progressOf">sur</span>
+          <span>15</span>
+        </div>
+        <div id="q-cat-badge" class="cat-badge">💬 Communication</div>
+      </div>
+      <div class="progress-track">
+        <div id="progress-bar-fill" class="progress-fill"></div>
+      </div>
+
+      <!-- Main Question Card -->
+      <div id="question-card-wrapper" class="question-card">
+        <div id="q-badge-num" class="question-badge-circle">1</div>
+        <h2 id="q-title" class="question-title">Quand l’un de vous passe une mauvaise journée, comment réagissez-vous ?</h2>
+
+        <!-- 4 Response Option Cards (2x2) -->
+        <div id="options-container" class="options-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+          <button id="btn-prev-q" class="btn-neutral" disabled>
+            <span>←</span>
+            <span data-i18n="btnPrev">Précédent</span>
+          </button>
+          <button id="btn-next-q" class="btn-primary" disabled>
+            <span id="next-btn-text" data-i18n="btnNext">Suivant</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 : ÉCRAN DE RÉSULTATS ==================== -->
+    <section id="section-results">
+      <!-- Global Animated Score Card -->
+      <div class="results-hero">
+        <div class="svg-circle-container">
+          <svg width="200" height="200" viewBox="0 0 200 200">
+            <circle class="circle-bg" cx="100" cy="100" r="80" />
+            <circle id="score-circle-bar" class="circle-progress" cx="100" cy="100" r="80" />
+          </svg>
+          <div class="circle-text-wrap">
+            <div id="score-number-display" class="score-percent">0%</div>
+          </div>
+        </div>
+        <h2 class="results-title" data-i18n="resTitle">Votre compatibilité</h2>
+        <div id="res-couple-names" class="results-couple-names">Sarah & Julien</div>
+      </div>
+
+      <!-- 5 Category Progress Bars -->
+      <div class="categories-box">
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+          <span>📊</span>
+          <span data-i18n="catBreakdownTitle">Détail des 5 piliers de complicité</span>
+        </h3>
+
+        <!-- Cat 1: Communication -->
+        <div class="cat-row">
+          <div class="cat-info">
+            <span>💬 <span data-i18n="catComm">Communication & Écoute</span></span>
+            <span id="cat-score-comm">85%</span>
+          </div>
+          <div class="cat-bar-bg"><div id="cat-bar-comm" class="cat-bar-fill"></div></div>
+        </div>
+
+        <!-- Cat 2: Valeurs -->
+        <div class="cat-row">
+          <div class="cat-info">
+            <span>🎯 <span data-i18n="catValues">Valeurs & Principes de vie</span></span>
+            <span id="cat-score-val">90%</span>
+          </div>
+          <div class="cat-bar-bg"><div id="cat-bar-val" class="cat-bar-fill"></div></div>
+        </div>
+
+        <!-- Cat 3: Intimité -->
+        <div class="cat-row">
+          <div class="cat-info">
+            <span>🔥 <span data-i18n="catIntimacy">Intimité & Tendresse</span></span>
+            <span id="cat-score-intim">80%</span>
+          </div>
+          <div class="cat-bar-bg"><div id="cat-bar-intim" class="cat-bar-fill"></div></div>
+        </div>
+
+        <!-- Cat 4: Conflits -->
+        <div class="cat-row">
+          <div class="cat-info">
+            <span>🤝 <span data-i18n="catConflict">Gestion des désaccords</span></span>
+            <span id="cat-score-conf">75%</span>
+          </div>
+          <div class="cat-bar-bg"><div id="cat-bar-conf" class="cat-bar-fill"></div></div>
+        </div>
+
+        <!-- Cat 5: Projets -->
+        <div class="cat-row">
+          <div class="cat-info">
+            <span>🚀 <span data-i18n="catFuture">Vision d’avenir & Projets</span></span>
+            <span id="cat-score-fut">88%</span>
+          </div>
+          <div class="cat-bar-bg"><div id="cat-bar-fut" class="cat-bar-fill"></div></div>
+        </div>
+      </div>
+
+      <!-- Textual Interpretation Card -->
+      <div class="interp-card">
+        <h3 id="interp-heading" class="interp-title" style="color: var(--coral);">Match exceptionnel ✨</h3>
+        <p id="interp-text" class="interp-msg">
+          Une alchimie rare et une complicité lumineuse unissent votre duo. Vous possédez une communication solide et un profond respect mutuel.
+        </p>
+
+        <div class="interp-lists">
+          <div>
+            <div class="list-title" style="color: #10B981;">
+              <span>✅</span>
+              <span data-i18n="strengthsTitle">Vos 3 points forts :</span>
+            </div>
+            <ul id="list-strengths" class="item-list">
+              <li><span>✓</span> Écoute active et soutien émotionnel constant</li>
+              <li><span>✓</span> Respect mutuel de vos libertés et projets individuels</li>
+              <li><span>✓</span> Capacité à désamorcer les tensions avec bienveillance</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="list-title" style="color: #F59E0B;">
+              <span>💡</span>
+              <span data-i18n="improvementsTitle">Pistes d'épanouissement :</span>
+            </div>
+            <ul id="list-improvements" class="item-list">
+              <li><span>•</span> Prévoir des rendez-vous surprises pour casser la routine</li>
+              <li><span>•</span> Continuer à exprimer vos désirs intimes sans retenue</li>
+              <li><span>•</span> Poser des objectifs à 3 ans pour canaliser vos envies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Action Buttons -->
+      <div class="actions-grid">
+        <button id="btn-restart-quiz" class="action-btn action-restart">
+          <span>🔄</span>
+          <span data-i18n="btnRestart">Recommencer</span>
+        </button>
+        <button id="btn-share-results" class="action-btn action-share">
+          <span>🔗</span>
+          <span data-i18n="btnShare">Partager</span>
+        </button>
+        <a href="blog.html" class="action-btn action-outline">
+          <span>📖</span>
+          <span data-i18n="btnArticles">Voir les articles</span>
+        </a>
+        <a href="index.html#tools" class="action-btn action-outline">
+          <span>💌</span>
+          <span data-i18n="btnPartnerTools">Outils partenaires</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SECTION 5 : POURQUOI CES QUESTIONS ==================== -->
+  <section class="why-section">
+    <div class="why-inner">
+      <h2 class="why-title" data-i18n="whyTitle">Pourquoi ces questions ?</h2>
+      <div class="why-grid">
+        <!-- Card 1 -->
+        <div class="why-card">
+          <div class="why-icon" style="background: var(--pastel-blue); color: #1E40AF;">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 data-i18n="why1Title">Basé sur la psychologie</h3>
+          <p data-i18n="why1Desc">Questions inspirées des travaux reconnus de John Gottman et des thérapies de couple systémiques.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="why-card">
+          <div class="why-icon" style="background: var(--pastel-yellow); color: #B45309;">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3 data-i18n="why2Title">9 catégories évaluées</h3>
+          <p data-i18n="why2Desc">Communication, valeurs fondamentales, intimité émotionnelle, résolution de conflits et synchronisation d'avenir.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-card">
+          <div class="why-icon" style="background: var(--powder); color: var(--coral);">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <h3 data-i18n="why3Title">100% privé & confidentiel</h3>
+          <p data-i18n="why3Desc">Aucune donnée n’est transmise à des tiers ou vendue. Tout le calcul est sécurisé et chiffré dans votre navigateur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Black Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="logo-icon" style="background: var(--coral);">
+              <svg viewBox="0 0 24 24" style="fill:#fff;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <div class="brand-name" style="color: #fff;">Love<span style="color: var(--coral);">Quiz</span></div>
+          </div>
+          <p data-i18n="footerDesc">
+            LoveQuiz est le compagnon relationnel nouvelle génération, conçu pour renforcer la complicité et nourrir le dialogue au sein des couples du monde entier.
+          </p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://pinterest.com" target="_blank" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerCol1">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="navHome">Accueil</a></li>
+            <li><a href="quiz.html" data-i18n="navQuiz">Quiz de couple</a></li>
+            <li><a href="tools.html" data-i18n="navTools">Outils d’amour</a></li>
+            <li><a href="blog.html" data-i18n="navBlog">Blog</a></li>
+            <li><a href="about.html" data-i18n="navAbout">À propos & Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerCol2">Outils & Légal</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#tools" data-i18n="footerLoveLang">5 Langages d’amour</a></li>
+            <li><a href="index.html#tools" data-i18n="footerDateGen">Générateur de dates</a></li>
+            <li><a href="mentions.html" data-i18n="footerMentions">Mentions légales</a></li>
+            <li><a href="confidentialite.html" data-i18n="footerPrivacy">Confidentialité RGPD</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerColNewsletter">Newsletter Douceur</h4>
+          <p data-i18n="newsletterDesc">Recevez une question complice et une idée de date chaque dimanche matin.</p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="votre@email.com" required>
+            <button type="submit" class="btn-primary" style="padding: 8px 16px; font-size: 13px;" data-i18n="btnSubscribe">S’inscrire</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 LoveQuiz. <span data-i18n="footerRights">Tous droits réservés.</span></div>
+        <div>
+          <a href="index.html" style="color: inherit; margin-right: 14px;">LoveQuiz Studio</a>
+          <span>•</span>
+          <span style="margin-left: 14px;">Paris, France</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast">
+    <span id="toast-icon">✓</span>
+    <span id="toast-msg">Progression sauvegardée</span>
+  </div>
+
+  <!-- EXTERNAL MODULES (QUESTIONS & SCORING) -->
+  <script src="/js/questions.js"></script>
+  <script src="/js/scoring.js"></script>
+
+  <!-- JAVASCRIPT ENGINE -->
+  <script>
+    /* ============================================================
+       1. DATA TRANSLATIONS (FR / EN)
+    ============================================================ */
+    const I18N = {
+      fr: {
+        topBanner: "Édition Spéciale Couple 2026 : Le test de compatibilité complet est 100% gratuit !",
+        navHome: "Accueil",
+        navQuiz: "Quiz de couple",
+        navTools: "Outils d’amour",
+        navBlog: "Blog",
+        navAbout: "À propos",
+        langSwitch: "EN",
+        headerCta: "Lancer le test",
+        introBadge: "Diagnostic Relationnel Certifié",
+        introTitle1: "Test de",
+        introTitleHighlight: "Compatibilité",
+        introTitle2: "Amoureuse",
+        introSubtitle: "15 questions pour évaluer votre connexion, sonder vos dynamiques et révéler les trésors de votre complicité.",
+        badge1: "5 minutes",
+        badge2: "15 questions",
+        badge3: "100% privé",
+        btnStart: "Commencer le quiz",
+        configTitle: "Personnalisez votre test",
+        configSubtitle: "Indiquez vos prénoms pour adapter les résultats et le rapport d’harmonie.",
+        btnResume: "Reprendre",
+        labelName1: "Votre prénom",
+        labelName2: "Prénom de votre partenaire",
+        labelRelation: "Type de relation",
+        relCouple: "En couple",
+        relDating: "Dating (début de relation)",
+        relMarried: "Marié·e",
+        relCurious: "Curieux·se (crush / célibataire)",
+        btnStartQuestions: "Lancer les questions",
+        progressLabel: "Question",
+        progressOf: "sur",
+        btnPrev: "Précédent",
+        btnNext: "Suivant",
+        btnFinish: "Voir mon résultat",
+        resTitle: "Votre compatibilité",
+        catBreakdownTitle: "Détail des 5 piliers de complicité",
+        catComm: "Communication & Écoute",
+        catValues: "Valeurs & Principes de vie",
+        catIntimacy: "Intimité & Tendresse",
+        catConflict: "Gestion des désaccords",
+        catFuture: "Vision d’avenir & Projets",
+        strengthsTitle: "Vos 3 points forts :",
+        improvementsTitle: "Pistes d'épanouissement :",
+        btnRestart: "Recommencer",
+        btnShare: "Partager",
+        btnArticles: "Voir les articles",
+        btnPartnerTools: "Outils partenaires",
+        whyTitle: "Pourquoi ces questions ?",
+        why1Title: "Basé sur la psychologie",
+        why1Desc: "Questions inspirées des travaux reconnus de John Gottman et des thérapies de couple systémiques.",
+        why2Title: "9 catégories évaluées",
+        why2Desc: "Communication, valeurs fondamentales, intimité émotionnelle, résolution de conflits et synchronisation d'avenir.",
+        why3Title: "100% privé & confidentiel",
+        why3Desc: "Aucune donnée n’est transmise à des tiers ou vendue. Tout le calcul est sécurisé et chiffré dans votre navigateur.",
+        footerDesc: "LoveQuiz est le compagnon relationnel nouvelle génération, conçu pour renforcer la complicité et nourrir le dialogue au sein des couples du monde entier.",
+        footerCol1: "Navigation",
+        footerCol2: "Outils & Légal",
+        footerLoveLang: "5 Langages d’amour",
+        footerDateGen: "Générateur de dates",
+        footerMentions: "Mentions légales",
+        footerPrivacy: "Confidentialité RGPD",
+        footerColNewsletter: "Newsletter Douceur",
+        newsletterDesc: "Recevez une question complice et une idée de date chaque dimanche matin.",
+        btnSubscribe: "S’inscrire",
+        footerRights: "Tous droits réservés.",
+        toastSaved: "Progression sauvegardée",
+        toastCopied: "Lien de résultat copié dans le presse-papier !",
+        toastNewsletter: "Merci ! Vous êtes bien inscrit(e) à notre newsletter."
+      },
+      en: {
+        topBanner: "Special 2026 Couple Edition: The full relationship compatibility test is 100% free!",
+        navHome: "Home",
+        navQuiz: "Couple Quiz",
+        navTools: "Love Tools",
+        navBlog: "Blog",
+        navAbout: "About Us",
+        langSwitch: "FR",
+        headerCta: "Take the test",
+        introBadge: "Certified Relationship Diagnostic",
+        introTitle1: "Love",
+        introTitleHighlight: "Compatibility",
+        introTitle2: "Test",
+        introSubtitle: "15 questions to assess your connection, explore relationship dynamics, and celebrate your unique chemistry.",
+        badge1: "5 min",
+        badge2: "15 questions",
+        badge3: "100% private",
+        btnStart: "Start the quiz",
+        configTitle: "Personalize your test",
+        configSubtitle: "Enter your names to customize your compatibility breakdown and chemistry report.",
+        btnResume: "Resume",
+        labelName1: "Your name",
+        labelName2: "Partner's name",
+        labelRelation: "Relationship type",
+        relCouple: "In a relationship",
+        relDating: "Dating (early stage)",
+        relMarried: "Married",
+        relCurious: "Just curious (crush / single)",
+        btnStartQuestions: "Start questions",
+        progressLabel: "Question",
+        progressOf: "of",
+        btnPrev: "Previous",
+        btnNext: "Next",
+        btnFinish: "See my results",
+        resTitle: "Your compatibility",
+        catBreakdownTitle: "5 Chemistry Pillars Breakdown",
+        catComm: "Communication & Empathy",
+        catValues: "Core Values & Life Philosophy",
+        catIntimacy: "Intimacy & Affection",
+        catConflict: "Conflict Resolution",
+        catFuture: "Shared Vision & Future Goals",
+        strengthsTitle: "Your 3 core strengths:",
+        improvementsTitle: "Growth opportunities:",
+        btnRestart: "Restart",
+        btnShare: "Share",
+        btnArticles: "View articles",
+        btnPartnerTools: "Partner tools",
+        whyTitle: "Why these questions?",
+        why1Title: "Based on psychology",
+        why1Desc: "Questions inspired by John Gottman's research and contemporary systemic couples therapy.",
+        why2Title: "9 categories assessed",
+        why2Desc: "Communication, core values, emotional intimacy, conflict resolution, and future sync.",
+        why3Title: "100% private & secure",
+        why3Desc: "No personal data sent to servers or third parties. All scores are computed securely in your browser.",
+        footerDesc: "LoveQuiz is the modern relationship companion, crafted to inspire genuine conversations and deepen connection worldwide.",
+        footerCol1: "Navigation",
+        footerCol2: "Tools & Legal",
+        footerLoveLang: "5 Love languages",
+        footerDateGen: "Date night generator",
+        footerMentions: "Legal notices",
+        footerPrivacy: "GDPR Privacy",
+        footerColNewsletter: "Sweetheart Newsletter",
+        newsletterDesc: "Get a thoughtful couple reflection question and a curated date idea every Sunday.",
+        btnSubscribe: "Subscribe",
+        footerRights: "All rights reserved.",
+        toastSaved: "Progress saved",
+        toastCopied: "Results link copied to clipboard!",
+        toastNewsletter: "Thank you! You are now subscribed to our newsletter."
+      }
+    };
+
+    /* ============================================================
+       2. 15 QUESTIONS DATA (5 CATEGORIES)
+    ============================================================ */
+    const QUESTIONS = [
+      // CATEGORY 1: COMMUNICATION (Q1 - Q3)
+      {
+        id: 1,
+        category: 'comm',
+        catLabelFr: "💬 Communication",
+        catLabelEn: "💬 Communication",
+        fr: {
+          q: "Quand l’un de vous passe une mauvaise journée, comment réagissez-vous ?",
+          options: [
+            { icon: "🫂", text: "On se pose ensemble, une écoute attentive sans jugement et un gros câlin.", points: 3 },
+            { icon: "⏳", text: "On lui laisse un peu d'espace pour décompresser, puis on en parle posément.", points: 2 },
+            { icon: "🔧", text: "On cherche immédiatement des solutions pratiques et logiques au problème.", points: 1 },
+            { icon: "🙈", text: "On a du mal à communiquer ces jours-là et la tension a tendance à monter.", points: 0 }
+          ]
+        },
+        en: {
+          q: "When one of you has had a rough day, how do you usually respond?",
+          options: [
+            { icon: "🫂", text: "We sit down together for active listening without judgment and a warm hug.", points: 3 },
+            { icon: "⏳", text: "We grant some quiet space to decompress first, then talk gently.", points: 2 },
+            { icon: "🔧", text: "We jump right into problem-solving and finding practical solutions.", points: 1 },
+            { icon: "🙈", text: "Communication feels difficult on those days and tension easily builds up.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 2,
+        category: 'comm',
+        catLabelFr: "💬 Communication",
+        catLabelEn: "💬 Communication",
+        fr: {
+          q: "À quelle fréquence partagez-vous vos émotions vulnérables et vos doutes profonds ?",
+          options: [
+            { icon: "🗣️", text: "Quasiment tous les jours, avec une vulnérabilité totale et bienveillante.", points: 3 },
+            { icon: "☕", text: "Régulièrement, lors de moments calmes en tête-à-tête.", points: 2 },
+            { icon: "🤐", text: "Seulement lorsqu'un problème sérieux ou une crise survient.", points: 1 },
+            { icon: "🔒", text: "Rarement, chacun garde souvent ses tourments pour soi.", points: 0 }
+          ]
+        },
+        en: {
+          q: "How often do you share your vulnerable emotions and deepest doubts?",
+          options: [
+            { icon: "🗣️", text: "Almost every day, with open vulnerability and unconditional warmth.", points: 3 },
+            { icon: "☕", text: "Regularly, during quiet and peaceful moments together.", points: 2 },
+            { icon: "🤐", text: "Only when an urgent issue or serious crisis arises.", points: 1 },
+            { icon: "🔒", text: "Rarely, we mostly keep our personal struggles to ourselves.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 3,
+        category: 'comm',
+        catLabelFr: "💬 Communication",
+        catLabelEn: "💬 Communication",
+        fr: {
+          q: "Comment exprimez-vous vos désaccords du quotidien ?",
+          options: [
+            { icon: "👂", text: "Avec calme, en cherchant d'abord à comprendre le ressenti de l'autre.", points: 3 },
+            { icon: "💬", text: "On dit les choses franchement, même si le ton s'échauffe un peu.", points: 2 },
+            { icon: "🤫", text: "On utilise des sous-entendus ou on boude pendant quelques heures.", points: 1 },
+            { icon: "💥", text: "Les désaccords dérivent vite vers des reproches ou des attaques blessantes.", points: 0 }
+          ]
+        },
+        en: {
+          q: "How do you express routine disagreements?",
+          options: [
+            { icon: "👂", text: "Calmly, seeking first to understand how the other person feels.", points: 3 },
+            { icon: "💬", text: "Frankly and directly, even if things get slightly heated.", points: 2 },
+            { icon: "🤫", text: "Through passive hints, sarcasm, or brief silent treatments.", points: 1 },
+            { icon: "💥", text: "Disagreements frequently turn into criticism or hurtful remarks.", points: 0 }
+          ]
+        }
+      },
+
+      // CATEGORY 2: VALEURS (Q4 - Q6)
+      {
+        id: 4,
+        category: 'val',
+        catLabelFr: "🎯 Valeurs",
+        catLabelEn: "🎯 Values",
+        fr: {
+          q: "Quelle importance accordez-vous à la gestion de l'argent et du budget ?",
+          options: [
+            { icon: "🎯", text: "Transparence totale et vision commune sur l'épargne et les projets.", points: 3 },
+            { icon: "⚖️", text: "Chacun garde son autonomie avec accord mutuel sur les gros achats.", points: 2 },
+            { icon: "💸", text: "Des sensibilités différentes qui créent des tiraillements passagers.", points: 1 },
+            { icon: "🚫", text: "Des philosophies opposées, source récurrente de disputes ou d'angoisse.", points: 0 }
+          ]
+        },
+        en: {
+          q: "How aligned are you on money management and spending priorities?",
+          options: [
+            { icon: "🎯", text: "Total transparency and shared vision regarding savings and investments.", points: 3 },
+            { icon: "⚖️", text: "Individual financial autonomy combined with consensus on major expenses.", points: 2 },
+            { icon: "💸", text: "Noticeably different spending styles causing occasional friction.", points: 1 },
+            { icon: "🚫", text: "Conflicting philosophies, causing regular stress and arguments.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 5,
+        category: 'val',
+        catLabelFr: "🎯 Valeurs",
+        catLabelEn: "🎯 Values",
+        fr: {
+          q: "Comment équilibrez-vous le temps à deux et vos libertés individuelles ?",
+          options: [
+            { icon: "🕊️", text: "Équilibre fluide : unis et complices, tout en encourageant nos passions perso.", points: 3 },
+            { icon: "🤝", text: "On fait presque tout ensemble et cela nous comble au quotidien.", points: 2 },
+            { icon: "🧩", text: "L'un ressent parfois un besoin d'air ou d'indépendance non comblé.", points: 1 },
+            { icon: "⚓", text: "Un sentiment régulier d'étouffement ou, au contraire, d'éloignement.", points: 0 }
+          ]
+        },
+        en: {
+          q: "How do you balance quality time together and individual freedom?",
+          options: [
+            { icon: "🕊️", text: "Harmonious balance: deeply bonded while actively supporting solo passions.", points: 3 },
+            { icon: "🤝", text: "We do almost everything together and thoroughly enjoy it.", points: 2 },
+            { icon: "🧩", text: "One partner occasionally desires more personal space than the other.", points: 1 },
+            { icon: "⚓", text: "Frequent feelings of either suffocation or emotional disconnect.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 6,
+        category: 'val',
+        catLabelFr: "🎯 Valeurs",
+        catLabelEn: "🎯 Values",
+        fr: {
+          q: "Sur les principes éthiques et moraux (famille, écologie, éducation), quelle est votre proximité ?",
+          options: [
+            { icon: "🧭", text: "Synchronisation quasi-parfaite sur l'essentiel et nos valeurs cardinales.", points: 3 },
+            { icon: "💡", text: "Des nuances différentes mais un profond respect pour nos points de vue.", points: 2 },
+            { icon: "🤔", text: "Quelques divergences qui provoquent des débats réguliers.", points: 1 },
+            { icon: "⚡", text: "Des désaccords idéologiques majeurs qui heurtent notre vision du monde.", points: 0 }
+          ]
+        },
+        en: {
+          q: "How close are your core ethical principles (family, lifestyle, morals)?",
+          options: [
+            { icon: "🧭", text: "Almost seamless synchronization on core life values and worldview.", points: 3 },
+            { icon: "💡", text: "Different nuances, but supported by profound mutual respect.", points: 2 },
+            { icon: "🤔", text: "A few noticeable differences that trigger recurrent debates.", points: 1 },
+            { icon: "⚡", text: "Major ideological clashes that cause deep incompatibility.", points: 0 }
+          ]
+        }
+      },
+
+      // CATEGORY 3: INTIMITÉ & AFFECTION (Q7 - Q9)
+      {
+        id: 7,
+        category: 'intim',
+        catLabelFr: "🔥 Intimité",
+        catLabelEn: "🔥 Intimacy",
+        fr: {
+          q: "Quelle place accordez-vous aux marques de tendresse et au contact physique ?",
+          options: [
+            { icon: "🫂", text: "Câlins, caresses et baisers spontanés parsèment chaque journée.", points: 3 },
+            { icon: "✨", text: "Des gestes affectueux fréquents, même si plus discrets en société.", points: 2 },
+            { icon: "🛋️", text: "Surtout concentrés sur certains rituels (au réveil, devant une série).", points: 1 },
+            { icon: "❄️", text: "Le contact physique est devenu rare ou source de distance.", points: 0 }
+          ]
+        },
+        en: {
+          q: "How essential are physical affection and tender gestures in your day-to-day?",
+          options: [
+            { icon: "🫂", text: "Spontaneous hugs, kisses, and touches occur naturally every day.", points: 3 },
+            { icon: "✨", text: "Frequent affectionate touches, though slightly more understated in public.", points: 2 },
+            { icon: "🛋️", text: "Mostly limited to routine moments (bedtime, movie nights).", points: 1 },
+            { icon: "❄️", text: "Physical touch has become sparse, distant, or neglected.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 8,
+        category: 'intim',
+        catLabelFr: "🔥 Intimité",
+        catLabelEn: "🔥 Intimacy",
+        fr: {
+          q: "Parlez-vous librement de vos désirs et de votre vie intime ?",
+          options: [
+            { icon: "🔥", text: "Sans aucun tabou : avec humour, écoute, curiosité et bienveillance.", points: 3 },
+            { icon: "💌", text: "Assez facilement, même si certains sujets intimes restent pudiques.", points: 2 },
+            { icon: "🙈", text: "C'est délicat, il arrive qu'on ressente de la gêne ou de la timidité.", points: 1 },
+            { icon: "🔒", text: "Sujet quasi-tabou, nous n'en parlons presque jamais ouvertement.", points: 0 }
+          ]
+        },
+        en: {
+          q: "Do you communicate comfortably about intimacy and personal desires?",
+          options: [
+            { icon: "🔥", text: "Completely taboo-free: with lightness, empathy, and playful curiosity.", points: 3 },
+            { icon: "💌", text: "Quite openly, even if some topics feel slightly bashful.", points: 2 },
+            { icon: "🙈", text: "It feels awkward, sometimes triggering hesitation or discomfort.", points: 1 },
+            { icon: "🔒", text: "Almost a taboo subject; we rarely address it directly.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 9,
+        category: 'intim',
+        catLabelFr: "🔥 Intimité",
+        catLabelEn: "🔥 Intimacy",
+        fr: {
+          q: "Quelle place occupent les petites attentions surprises dans votre quotidien ?",
+          options: [
+            { icon: "🎁", text: "Fréquentes : un mot doux, un encas préféré, un compliment inattendu.", points: 3 },
+            { icon: "☕", text: "Occasionnelles mais toujours chargées d'une sincère délicatesse.", points: 2 },
+            { icon: "📅", text: "Réservées aux anniversaires ou aux dates symboliques du calendrier.", points: 1 },
+            { icon: "⏳", text: "La routine a pris le dessus et les attentions se sont raréfiées.", points: 0 }
+          ]
+        },
+        en: {
+          q: "What role do spontaneous surprises and thoughtful gestures play?",
+          options: [
+            { icon: "🎁", text: "Frequent: sweet post-its, a favorite treat, an unexpected compliment.", points: 3 },
+            { icon: "☕", text: "Occasional, but always deeply meaningful and heartfelt.", points: 2 },
+            { icon: "📅", text: "Confined strictly to birthdays and major calendar holidays.", points: 1 },
+            { icon: "⏳", text: "Routine took precedence and thoughtful gestures have faded.", points: 0 }
+          ]
+        }
+      },
+
+      // CATEGORY 4: CONFLITS & RÉSOLUTION (Q10 - Q12)
+      {
+        id: 10,
+        category: 'conf',
+        catLabelFr: "🤝 Conflits",
+        catLabelEn: "🤝 Conflict",
+        fr: {
+          q: "Après une dispute, comment restaurez-vous la complicité ?",
+          options: [
+            { icon: "🌈", text: "On sait s'excuser sincèrement, désamorcer avec tendresse et tourner la page.", points: 3 },
+            { icon: "⏳", text: "On laisse la nuit passer, puis on se retrouve naturellement au réveil.", points: 2 },
+            { icon: "😶", text: "On attend que la mauvaise humeur disparaisse sans vrai débriefing.", points: 1 },
+            { icon: "🌪️", text: "Le froid persiste plusieurs jours avec une amertume résiduelle.", points: 0 }
+          ]
+        },
+        en: {
+          q: "Following an argument, how do you restore closeness and peace?",
+          options: [
+            { icon: "🌈", text: "We apologize sincerely, defuse with love, and cleanly turn the page.", points: 3 },
+            { icon: "⏳", text: "We sleep on it, and reconnect warmly the next morning.", points: 2 },
+            { icon: "😶", text: "We wait for tension to evaporate without ever debriefing.", points: 1 },
+            { icon: "🌪️", text: "Chilly silence lingers for days with lingering bitterness.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 11,
+        category: 'conf',
+        catLabelFr: "🤝 Conflits",
+        catLabelEn: "🤝 Conflict",
+        fr: {
+          q: "Lors d'un désaccord houleux, quelle dynamique apparaît le plus souvent ?",
+          options: [
+            { icon: "🤝", text: "Nous formons équipe contre le problème, jamais l'un contre l'autre.", points: 3 },
+            { icon: "🗣️", text: "Chacun défend vigoureusement son point avant de négocier un compromis.", points: 2 },
+            { icon: "🛑", text: "L'un de nous a tendance à fuir ou à se murer dans le silence.", points: 1 },
+            { icon: "🎯", text: "Les reproches du passé refont surface et alimentent l'escalade.", points: 0 }
+          ]
+        },
+        en: {
+          q: "During a heated debate, what dynamic usually emerges?",
+          options: [
+            { icon: "🤝", text: "We team up against the problem, never against each other.", points: 3 },
+            { icon: "🗣️", text: "Both defend their points vigorously before negotiating a compromise.", points: 2 },
+            { icon: "🛑", text: "One of us shuts down, stonewalls, or walks out.", points: 1 },
+            { icon: "🎯", text: "Old grievances from months ago get resurfaced and weaponized.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 12,
+        category: 'conf',
+        catLabelFr: "🤝 Conflits",
+        catLabelEn: "🤝 Conflict",
+        fr: {
+          q: "Face aux petites manies et défauts agaçants de votre partenaire, quelle est votre réaction ?",
+          options: [
+            { icon: "🥰", text: "Tendresse et humour : nous en rions ensemble avec bienveillance.", points: 3 },
+            { icon: "😌", text: "Patience la plupart du temps, sauf en cas de fatigue extrême.", points: 2 },
+            { icon: "😤", text: "Cela génère souvent des piques verbales et de l'exaspération.", points: 1 },
+            { icon: "💔", text: "Une irritation chronique qui nourrit un sentiment de déception.", points: 0 }
+          ]
+        },
+        en: {
+          q: "When facing your partner's quirky habits or flaws, how do you feel?",
+          options: [
+            { icon: "🥰", text: "Affection and humor: we laugh about them gently together.", points: 3 },
+            { icon: "😌", text: "Patience most of the time, except when running on empty.", points: 2 },
+            { icon: "😤", text: "It regularly provokes sarcastic jabs and irritation.", points: 1 },
+            { icon: "💔", text: "Chronic resentment that feeds ongoing disillusionment.", points: 0 }
+          ]
+        }
+      },
+
+      // CATEGORY 5: PROJETS & VISION D'AVENIR (Q13 - Q15)
+      {
+        id: 13,
+        category: 'fut',
+        catLabelFr: "🚀 Projets",
+        catLabelEn: "🚀 Future",
+        fr: {
+          q: "Comment envisagez-vous votre avenir commun à 3-5 ans ?",
+          options: [
+            { icon: "🚀", text: "Des projets communs enthousiasmants et une vision claire qui nous motive.", points: 3 },
+            { icon: "🌱", text: "Une direction globale partagée que nous peaufinons au fil du temps.", points: 2 },
+            { icon: "🌫️", text: "Des envies un peu floues ou des rythmes personnels à accorder.", points: 1 },
+            { icon: "🧭", text: "Des aspirations divergentes qui créent de l'appréhension pour la suite.", points: 0 }
+          ]
+        },
+        en: {
+          q: "How clearly do you picture your shared future in 3-5 years?",
+          options: [
+            { icon: "🚀", text: "Exciting shared goals and a crystal-clear vision that energizes us both.", points: 3 },
+            { icon: "🌱", text: "A solid general direction that we happily refine as we grow.", points: 2 },
+            { icon: "🌫️", text: "A bit fuzzy, or with different life timelines to coordinate.", points: 1 },
+            { icon: "🧭", text: "Divergent aspirations that trigger worry and hesitation.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 14,
+        category: 'fut',
+        catLabelFr: "🚀 Projets",
+        catLabelEn: "🚀 Future",
+        fr: {
+          q: "Face à une épreuve imprévue (santé, coup dur pro, déménagement), comment réagissez-vous ?",
+          options: [
+            { icon: "🛡️", text: "Un roc solidaire : l'adversité renforce notre attachement et notre courage.", points: 3 },
+            { icon: "🤝", text: "On se serre les coudes même si le stress pèse temporairement sur le couple.", points: 2 },
+            { icon: "⚡", text: "Le stress extérieur a tendance à fragiliser nos échanges et notre calme.", points: 1 },
+            { icon: "🏃", text: "Chacun gère son fardeau dans son coin sans véritable synergie.", points: 0 }
+          ]
+        },
+        en: {
+          q: "Facing an unexpected life challenge (career bump, health, move), how do you react?",
+          options: [
+            { icon: "🛡️", text: "A unified fortress: hardship only strengthens our mutual devotion.", points: 3 },
+            { icon: "🤝", text: "We hold hands tightly, even when external stress runs high.", points: 2 },
+            { icon: "⚡", text: "External stress easily strains our gentleness and patience.", points: 1 },
+            { icon: "🏃", text: "Each person deals with their burden alone without teamwork.", points: 0 }
+          ]
+        }
+      },
+      {
+        id: 15,
+        category: 'fut',
+        catLabelFr: "🚀 Projets",
+        catLabelEn: "🚀 Future",
+        fr: {
+          q: "Quel sentiment domine lorsque vous pensez à la longévité de votre relation ?",
+          options: [
+            { icon: "✨", text: "Confiance absolue, gratitude et certitude d'avoir trouvé son port d'attache.", points: 3 },
+            { icon: "💖", text: "Sérénité et tendresse, avec l'envie d'entretenir ce beau lien au fil des ans.", points: 2 },
+            { icon: "❓", text: "Un mélange d'affection sincère et de questionnements sur la durée.", points: 1 },
+            { icon: "🌧️", text: "Des doutes prégnants sur notre pérennité à long terme.", points: 0 }
+          ]
+        },
+        en: {
+          q: "What emotion predominates when reflecting on the longevity of your union?",
+          options: [
+            { icon: "✨", text: "Total trust, gratitude, and confidence in having found our soul harbor.", points: 3 },
+            { icon: "💖", text: "Peace and warmth, eager to nurture this bond across the years.", points: 2 },
+            { icon: "❓", text: "A mix of tender feelings and lingering questions about the future.", points: 1 },
+            { icon: "🌧️", text: "Persistent doubts about long-term sustainability.", points: 0 }
+          ]
+        }
+      }
+    ];
+
+    /* ============================================================
+       3. QUIZ STATE & STORAGE
+    ============================================================ */
+    let currentLang = 'fr';
+    let currentStep = 0; // 0 to 14
+    let answers = new Array(15).fill(null); // stores index 0..3
+    let partner1 = "Camille";
+    let partner2 = "Julien";
+    let relationType = "couple";
+
+    // Load saved lang preference
+    try {
+      const savedLang = localStorage.getItem('lovequiz_lang');
+      if (savedLang === 'fr' || savedLang === 'en') {
+        currentLang = savedLang;
+      }
+    } catch(e) {}
+
+    // Check if URL has shared result params
+    const urlParams = new URLSearchParams(window.location.search);
+    const sharedP1 = urlParams.get('p1');
+    const sharedP2 = urlParams.get('p2');
+    const sharedScore = urlParams.get('score');
+
+    /* ============================================================
+       4. DOM REFERENCES
+    ============================================================ */
+    const sectionIntro = document.getElementById('section-intro');
+    const sectionConfig = document.getElementById('section-config');
+    const sectionQuestions = document.getElementById('section-questions');
+    const sectionResults = document.getElementById('section-results');
+
+    const btnStartIntro = document.getElementById('btn-start-intro');
+    const configForm = document.getElementById('config-form');
+    const inputName1 = document.getElementById('input-name-1');
+    const inputName2 = document.getElementById('input-name-2');
+    const selectRelation = document.getElementById('select-relation');
+    const btnSubmitConfig = document.getElementById('btn-submit-config');
+    const resumeBanner = document.getElementById('resume-banner');
+    const btnResumeSession = document.getElementById('btn-resume-session');
+    const resumeText = document.getElementById('resume-text');
+
+    const qCurrNum = document.getElementById('q-curr-num');
+    const qCatBadge = document.getElementById('q-cat-badge');
+    const progressBarFill = document.getElementById('progress-bar-fill');
+    const qBadgeNum = document.getElementById('q-badge-num');
+    const qTitle = document.getElementById('q-title');
+    const optionsContainer = document.getElementById('options-container');
+    const btnPrevQ = document.getElementById('btn-prev-q');
+    const btnNextQ = document.getElementById('btn-next-q');
+    const nextBtnText = document.getElementById('next-btn-text');
+
+    const scoreNumberDisplay = document.getElementById('score-number-display');
+    const scoreCircleBar = document.getElementById('score-circle-bar');
+    const resCoupleNames = document.getElementById('res-couple-names');
+    const interpHeading = document.getElementById('interp-heading');
+    const interpText = document.getElementById('interp-text');
+    const listStrengths = document.getElementById('list-strengths');
+    const listImprovements = document.getElementById('list-improvements');
+
+    const catScoreComm = document.getElementById('cat-score-comm');
+    const catBarComm = document.getElementById('cat-bar-comm');
+    const catScoreVal = document.getElementById('cat-score-val');
+    const catBarVal = document.getElementById('cat-bar-val');
+    const catScoreIntim = document.getElementById('cat-score-intim');
+    const catBarIntim = document.getElementById('cat-bar-intim');
+    const catScoreConf = document.getElementById('cat-score-conf');
+    const catBarConf = document.getElementById('cat-bar-conf');
+    const catScoreFut = document.getElementById('cat-score-fut');
+    const catBarFut = document.getElementById('cat-bar-fut');
+
+    const btnRestartQuiz = document.getElementById('btn-restart-quiz');
+    const btnShareResults = document.getElementById('btn-share-results');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-msg');
+    const langToggleBtn = document.getElementById('lang-toggle-btn');
+    const langFlag = document.getElementById('lang-flag');
+    const langCode = document.getElementById('lang-code');
+
+    /* ============================================================
+       5. HELPER FUNCTIONS
+    ============================================================ */
+    function showToast(message) {
+      toastMsg.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3200);
+    }
+
+    function applyTranslations() {
+      const dict = I18N[currentLang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+      langFlag.textContent = currentLang === 'fr' ? '🇫🇷' : '🇬🇧';
+      langCode.textContent = currentLang.toUpperCase();
+      document.documentElement.lang = currentLang;
+
+      // Update question text if currently on questions screen
+      if (sectionQuestions.style.display === 'block') {
+        renderQuestion(currentStep);
+      }
+    }
+
+    function saveState() {
+      try {
+        const payload = {
+          currentStep,
+          answers,
+          partner1,
+          partner2,
+          relationType,
+          savedAt: Date.now()
+        };
+        localStorage.setItem('lovequiz_session', JSON.stringify(payload));
+        showToast(I18N[currentLang].toastSaved);
+      } catch(e) {}
+    }
+
+    function checkSavedState() {
+      try {
+        const raw = localStorage.getItem('lovequiz_session');
+        if (!raw) return false;
+        const data = JSON.parse(raw);
+        if (data && Array.isArray(data.answers) && data.answers.some(a => a !== null)) {
+          return data;
+        }
+      } catch(e) {}
+      return false;
+    }
+
+    /* ============================================================
+       6. RENDER QUESTION
+    ============================================================ */
+    function renderQuestion(stepIndex) {
+      const qData = QUESTIONS[stepIndex];
+      const langContent = qData[currentLang];
+
+      qCurrNum.textContent = stepIndex + 1;
+      qBadgeNum.textContent = stepIndex + 1;
+      qCatBadge.textContent = currentLang === 'fr' ? qData.catLabelFr : qData.catLabelEn;
+      progressBarFill.style.width = `${((stepIndex + 1) / 15) * 100}%`;
+      qTitle.textContent = langContent.q;
+
+      // Previous button state
+      btnPrevQ.disabled = (stepIndex === 0);
+
+      // Next button text & state
+      const hasAnswer = (answers[stepIndex] !== null);
+      btnNextQ.disabled = !hasAnswer;
+      if (stepIndex === 14) {
+        nextBtnText.textContent = I18N[currentLang].btnFinish;
+      } else {
+        nextBtnText.textContent = I18N[currentLang].btnNext;
+      }
+
+      // Render 4 option cards
+      optionsContainer.innerHTML = '';
+      langContent.options.forEach((opt, idx) => {
+        const isSelected = (answers[stepIndex] === idx);
+        const card = document.createElement('div');
+        card.className = `option-card ${isSelected ? 'selected' : ''}`;
+        card.innerHTML = `
+          <span class="option-icon">${opt.icon}</span>
+          <span class="option-text">${opt.text}</span>
+          <div class="check-icon">✓</div>
+        `;
+        card.addEventListener('click', () => {
+          selectOption(idx);
+        });
+        optionsContainer.appendChild(card);
+      });
+    }
+
+    function selectOption(optionIndex) {
+      answers[currentStep] = optionIndex;
+      renderQuestion(currentStep);
+      saveState();
+
+      // Smooth auto-advancement after brief delay for delightful experience
+      setTimeout(() => {
+        if (currentStep < 14) {
+          currentStep++;
+          slideQuestion(currentStep);
+        } else {
+          calculateAndShowResults();
+        }
+      }, 350);
+    }
+
+    function slideQuestion(nextIndex) {
+      const wrapper = document.getElementById('question-card-wrapper');
+      wrapper.style.opacity = '0';
+      wrapper.style.transform = 'translateX(20px)';
+      setTimeout(() => {
+        renderQuestion(nextIndex);
+        wrapper.style.transform = 'translateX(-20px)';
+        setTimeout(() => {
+          wrapper.style.opacity = '1';
+          wrapper.style.transform = 'translateX(0)';
+        }, 30);
+      }, 150);
+    }
+
+    /* ============================================================
+       7. RESULTS COMPUTATION & RENDERING
+    ============================================================ */
+    function calculateAndShowResults() {
+      sectionQuestions.style.display = 'none';
+      sectionResults.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Total points: max 15 * 3 = 45
+      let totalPts = 0;
+      const catPts = { comm: 0, val: 0, intim: 0, conf: 0, fut: 0 };
+
+      QUESTIONS.forEach((q, idx) => {
+        const choiceIdx = answers[idx] !== null ? answers[idx] : 2;
+        const pts = q[currentLang].options[choiceIdx].points;
+        totalPts += pts;
+        catPts[q.category] += pts;
+      });
+
+      const totalScorePercent = Math.min(100, Math.max(10, Math.round((totalPts / 45) * 100)));
+
+      // 5 Categories: 3 questions each -> max 9 pts
+      const commScore = Math.round((catPts.comm / 9) * 100);
+      const valScore = Math.round((catPts.val / 9) * 100);
+      const intimScore = Math.round((catPts.intim / 9) * 100);
+      const confScore = Math.round((catPts.conf / 9) * 100);
+      const futScore = Math.round((catPts.fut / 9) * 100);
+
+      // Display couple names
+      resCoupleNames.textContent = `${partner1} & ${partner2}`;
+
+      // Animate score number & SVG circle
+      scoreNumberDisplay.textContent = `${totalScorePercent}%`;
+
+      // Color coding
+      let strokeColor = '#FF6B8A';
+      let titleBracket = '';
+      let messageBracket = '';
+
+      if (totalScorePercent >= 80) {
+        strokeColor = '#FF6B8A'; // Rose corail
+        titleBracket = currentLang === 'fr' ? 'Match exceptionnel ✨' : 'Exceptional match ✨';
+        messageBracket = currentLang === 'fr'
+          ? `L'alchimie entre ${partner1} et ${partner2} est étincelante ! Vous partagez une écoute bienveillante, des valeurs alignées et une vraie complicité affective qui vous permet de traverser les tempêtes en restant unis.`
+          : `The chemistry between ${partner1} and ${partner2} is luminous! You share genuine empathy, closely aligned values, and deep emotional trust that helps you weather any storm as a true team.`;
+      } else if (totalScorePercent >= 60) {
+        strokeColor = '#4CAF50'; // Vert
+        titleBracket = currentLang === 'fr' ? 'Bonne compatibilité 🌱' : 'Good compatibility 🌱';
+        messageBracket = currentLang === 'fr'
+          ? `Votre socle de couple est très prometteur. Vous formez un tandem solide avec une belle capacité à échanger. En accordant encore plus d'attention à vos langages affectifs, votre duo atteindra des sommets d'épanouissement.`
+          : `Your relationship foundation is remarkably solid. You make an authentic team with great communication habits. Nurturing your emotional love languages will take your bond even higher.`;
+      } else if (totalScorePercent >= 40) {
+        strokeColor = '#FFA500'; // Orange
+        titleBracket = currentLang === 'fr' ? 'Compatibilité moyenne ⚖️' : 'Average compatibility ⚖️';
+        messageBracket = currentLang === 'fr'
+          ? `Il y a de la tendresse entre vous, mais certains décalages de rythme ou de communication créent parfois des incompréhensions. Quelques rituels réguliers de dialogue sans tabou vous permettront d'apaiser les tensions.`
+          : `There is heartfelt affection between you, but differences in pacing or conflict resolution occasionally trigger misunderstandings. Dedicated dialogue rituals will help restore lasting harmony.`;
+      } else {
+        strokeColor = '#FF4444'; // Rouge
+        titleBracket = currentLang === 'fr' ? 'Relation à travailler 💬' : 'Relationship needs work 💬';
+        messageBracket = currentLang === 'fr'
+          ? `Des frictions récurrentes fragilisent actuellement votre échange. C'est l'occasion idéale de poser les choses à plat avec douceur et d'aborder vos attentes réciproques sans reproches.`
+          : `Recurrent friction is currently straining your connection. This is a valuable wake-up call to sit down gently, share needs candidly, and rebuild emotional safety together.`;
+      }
+
+      interpHeading.textContent = titleBracket;
+      interpHeading.style.color = strokeColor;
+      interpText.textContent = messageBracket;
+      scoreNumberDisplay.style.color = strokeColor;
+
+      // Animate SVG circle (circumference = 2 * PI * 80 = 502.65)
+      const circumference = 502.65;
+      const offset = circumference - (totalScorePercent / 100) * circumference;
+      scoreCircleBar.style.stroke = strokeColor;
+      setTimeout(() => {
+        scoreCircleBar.style.strokeDashoffset = offset;
+      }, 100);
+
+      // Animate 5 category bars
+      catScoreComm.textContent = `${commScore}%`;
+      catScoreVal.textContent = `${valScore}%`;
+      catScoreIntim.textContent = `${intimScore}%`;
+      catScoreConf.textContent = `${confScore}%`;
+      catScoreFut.textContent = `${futScore}%`;
+
+      setTimeout(() => {
+        catBarComm.style.width = `${commScore}%`;
+        catBarVal.style.width = `${valScore}%`;
+        catBarIntim.style.width = `${intimScore}%`;
+        catBarConf.style.width = `${confScore}%`;
+        catBarFut.style.width = `${futScore}%`;
+      }, 200);
+
+      // 3 Strengths & 3 Improvements
+      if (currentLang === 'fr') {
+        listStrengths.innerHTML = `
+          <li><span>✓</span> Écoute active et soutien émotionnel aux moments clés</li>
+          <li><span>✓</span> Respect mutuel de vos individualités et projets</li>
+          <li><span>✓</span> Sincérité du sentiment d'attachement</li>
+        `;
+        listImprovements.innerHTML = `
+          <li><span>•</span> Prévoir un rendez-vous insolite chaque quinzaine</li>
+          <li><span>•</span> Désamorcer plus rapidement les non-dits du quotidien</li>
+          <li><span>•</span> Clarifier vos objectifs d'avenir à moyen terme</li>
+        `;
+      } else {
+        listStrengths.innerHTML = `
+          <li><span>✓</span> Active emotional empathy during crucial moments</li>
+          <li><span>✓</span> Healthy respect for each other's personal space and passions</li>
+          <li><span>✓</span> Genuine, heartfelt mutual attachment</li>
+        `;
+        listImprovements.innerHTML = `
+          <li><span>•</span> Schedule an unplugged date night every fortnight</li>
+          <li><span>•</span> Address unspoken doubts earlier before frustration builds</li>
+          <li><span>•</span> Co-create a clear 3-year vision board for life milestones</li>
+        `;
+      }
+    }
+
+    /* ============================================================
+       8. EVENT LISTENERS
+    ============================================================ */
+    // Check for shared score in URL
+    if (sharedScore && sharedP1 && sharedP2) {
+      partner1 = decodeURIComponent(sharedP1);
+      partner2 = decodeURIComponent(sharedP2);
+      // Directly render results with mock realistic answers
+      const mockScore = parseInt(sharedScore, 10) || 85;
+      const targetPts = Math.round((mockScore / 100) * 45);
+      // Distribute points into answers
+      for (let i = 0; i < 15; i++) {
+        answers[i] = (mockScore > 75) ? (i % 2 === 0 ? 0 : 1) : 2;
+      }
+      sectionIntro.style.display = 'none';
+      calculateAndShowResults();
+    } else {
+      // Check saved progress
+      const saved = checkSavedState();
+      if (saved) {
+        resumeBanner.style.display = 'flex';
+        resumeText.textContent = `${currentLang === 'fr' ? 'Session précédente trouvée' : 'Previous session found'} (${saved.partner1} & ${saved.partner2} - Q${saved.currentStep + 1}/15)`;
+        partner1 = saved.partner1 || partner1;
+        partner2 = saved.partner2 || partner2;
+        relationType = saved.relationType || relationType;
+        inputName1.value = partner1;
+        inputName2.value = partner2;
+        selectRelation.value = relationType;
+        answers = saved.answers || answers;
+        currentStep = saved.currentStep || 0;
+        btnSubmitConfig.disabled = false;
+      }
+    }
+
+    // Start intro CTA -> Goes to Section 2 (Config)
+    btnStartIntro.addEventListener('click', () => {
+      sectionIntro.style.display = 'none';
+      sectionConfig.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Resume session button
+    btnResumeSession.addEventListener('click', (e) => {
+      e.preventDefault();
+      sectionConfig.style.display = 'none';
+      sectionQuestions.style.display = 'block';
+      renderQuestion(currentStep);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Validate inputs in config form
+    function checkInputs() {
+      const v1 = inputName1.value.trim();
+      const v2 = inputName2.value.trim();
+      btnSubmitConfig.disabled = !(v1.length > 0 && v2.length > 0);
+    }
+    inputName1.addEventListener('input', checkInputs);
+    inputName2.addEventListener('input', checkInputs);
+
+    // Submit config -> Launch questions
+    configForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      partner1 = inputName1.value.trim() || "Camille";
+      partner2 = inputName2.value.trim() || "Julien";
+      relationType = selectRelation.value;
+
+      sectionConfig.style.display = 'none';
+      sectionQuestions.style.display = 'block';
+      renderQuestion(currentStep);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      saveState();
+    });
+
+    // Questions navigation
+    btnPrevQ.addEventListener('click', () => {
+      if (currentStep > 0) {
+        currentStep--;
+        slideQuestion(currentStep);
+      }
+    });
+
+    btnNextQ.addEventListener('click', () => {
+      if (currentStep < 14) {
+        currentStep++;
+        slideQuestion(currentStep);
+      } else {
+        calculateAndShowResults();
+      }
+    });
+
+    // Restart Quiz
+    btnRestartQuiz.addEventListener('click', () => {
+      try {
+        localStorage.removeItem('lovequiz_session');
+      } catch(e) {}
+      answers = new Array(15).fill(null);
+      currentStep = 0;
+      sectionResults.style.display = 'none';
+      sectionConfig.style.display = 'block';
+      resumeBanner.style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Share Results (Web Share API or Clipboard)
+    btnShareResults.addEventListener('click', () => {
+      const shareUrl = `${window.location.origin}${window.location.pathname}?p1=${encodeURIComponent(partner1)}&p2=${encodeURIComponent(partner2)}&score=${parseInt(scoreNumberDisplay.textContent, 10) || 85}`;
+      const title = `LoveQuiz — Compatibilité de ${partner1} & ${partner2}`;
+      const text = `Nous avons testé notre compatibilité de couple sur LoveQuiz : ${scoreNumberDisplay.textContent} d'alchimie ! Fais le test toi aussi.`;
+
+      if (navigator.share) {
+        navigator.share({ title, text, url: shareUrl }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          showToast(I18N[currentLang].toastCopied);
+        }).catch(() => {
+          showToast("Lien : " + shareUrl);
+        });
+      }
+    });
+
+    // Toggle Language (FR <-> EN)
+    langToggleBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      try {
+        localStorage.setItem('lovequiz_lang', currentLang);
+      } catch(e) {}
+      applyTranslations();
+      showToast(currentLang === 'fr' ? "Langue changée en Français" : "Language switched to English");
+    });
+
+    // Newsletter fake submit
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast(I18N[currentLang].toastNewsletter);
+        newsletterForm.reset();
+      });
+    }
+
+    // Initial translation apply
+    applyTranslations();
+  </script>
+</body>
+</html>

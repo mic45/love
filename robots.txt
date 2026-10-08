@@ -1,0 +1,6 @@
+# Robots.txt pour LoveQuiz
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.lovequiz.com/sitemap.xml

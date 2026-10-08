@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <!-- Ignore Vite HMR WebSocket connection errors as specified in the environment runtime instructions: "HMR: Disabled. Ignore WebSocket errors." -->
+    <script>
+      (function() {
+        if (typeof window !== 'undefined') {
+          // Intercept Vite HMR WebSocket connection attempts in Cloud Run iframe
+          if (window.WebSocket) {
+            try {
+              var NativeWebSocket = window.WebSocket;
+              window.WebSocket = new Proxy(NativeWebSocket, {
+                construct: function(Target, args) {
+                  var protocols = args[1];
+                  if (protocols === 'vite-hmr' || (Array.isArray(protocols) && protocols.indexOf('vite-hmr') !== -1)) {
+                    var target = new EventTarget();
+                    target.CONNECTING = 0;
+                    target.OPEN = 1;
+                    target.CLOSING = 2;
+                    target.CLOSED = 3;
+                    target.readyState = 1; // Immediate OPEN so @vite/client skips connection wait and never errors
+                    target.send = function() {};
+                    target.close = function() {};
+                    target.onopen = null;
+                    target.onmessage = null;
+                    target.onclose = null;
+                    target.onerror = null;
+                    return target;
+                  }
+                  return new Target(args[0], args[1]);
+                }
+              });
+            } catch (e) {}
+          }
+
+          // Suppress [vite] console errors & warnings per AI Studio instructions
+          var origError = console.error;
+          console.error = function() {
+            var args = Array.prototype.slice.call(arguments);
+            if (args.length > 0) {
+              var first = String(args[0]);
+              if (first === '[vite]' || first.indexOf('[vite]') !== -1) {
+                return;
+              }
+            }
+            return origError.apply(console, args);
+          };
+
+          var origWarn = console.warn;
+          console.warn = function() {
+            var args = Array.prototype.slice.call(arguments);
+            if (args.length > 0) {
+              var first = String(args[0]);
+              if (first === '[vite]' || first.indexOf('[vite]') !== -1) {
+                return;
+              }
+            }
+            return origWarn.apply(console, args);
+          };
+
+          window.onerror = function(message, source) {
+            if (
+              (message && String(message).indexOf('[vite]') !== -1) ||
+              (source && String(source).indexOf('@vite/client') !== -1)
+            ) {
+              return true; // prevent error bubbling
+            }
+          };
+
+          window.addEventListener('error', function(event) {
+            if (event && (
+              (event.message && String(event.message).indexOf('[vite]') !== -1) ||
+              (event.filename && String(event.filename).indexOf('@vite/client') !== -1)
+            )) {
+              event.stopImmediatePropagation();
+              event.preventDefault();
+              return true;
+            }
+          }, true);
+
+          window.addEventListener('unhandledrejection', function(event) {
+            if (event && event.reason && (
+              String(event.reason).indexOf('[vite]') !== -1 ||
+              String(event.reason).indexOf('WebSocket') !== -1
+            )) {
+              event.stopImmediatePropagation();
+              event.preventDefault();
+              return true;
+            }
+          }, true);
+        }
+      })();
+    </script>
+
+    <!-- Base Configuration -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary SEO Metadata -->
+    <title>LoveQuiz - Test de Compatibilité Amoureuse Gratuit (15 Questions)</title>
+    <meta
+      name="description"
+      content="Découvrez votre compatibilité amoureuse avec notre quiz gratuit de 15 questions. Basé sur la psychologie relationnelle. Résultats instantanés et privés."
+    />
+    <meta
+      name="keywords"
+      content="compatibilité amoureuse, quiz couple, test couple gratuit, test amour, psychologie couple, affinité amoureuse, 5 langages de l'amour, idées date couple, compatibilité astrologique couple, test relation sérieux, Gottman couple"
+    />
+    <meta name="author" content="LoveQuiz" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Canonical & Hreflang Alternates -->
+    <link rel="canonical" href="https://www.lovequiz.com/" />
+    <link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.lovequiz.com/" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Mobile & Theme Metadata -->
+    <meta name="theme-color" content="#FF6B8A" />
+    <meta name="msapplication-TileColor" content="#FF6B8A" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="LoveQuiz" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Discord, Slack, iMessage) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LoveQuiz" />
+    <meta property="og:title" content="LoveQuiz - Test de Compatibilité Amoureuse Gratuit (15 Questions)" />
+    <meta
+      property="og:description"
+      content="Découvrez votre compatibilité amoureuse avec notre quiz gratuit de 15 questions. Basé sur la psychologie relationnelle. Résultats instantanés et privés."
+    />
+    <meta property="og:url" content="https://www.lovequiz.com/" />
+    <meta property="og:image" content="https://www.lovequiz.com/assets/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="LoveQuiz – Diagnostic et test de compatibilité de couple" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter / X Social Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovequiz" />
+    <meta name="twitter:creator" content="@lovequiz" />
+    <meta name="twitter:title" content="LoveQuiz - Test de Compatibilité Amoureuse Gratuit (15 Questions)" />
+    <meta
+      name="twitter:description"
+      content="Découvrez votre compatibilité amoureuse avec notre quiz gratuit de 15 questions. Basé sur la psychologie relationnelle."
+    />
+    <meta name="twitter:image" content="https://www.lovequiz.com/assets/img/og-image.jpg" />
+    <meta name="twitter:image:alt" content="LoveQuiz Couple Compatibility Test" />
+
+    <!-- Performance & Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Schema.org 1: WebApplication (Applet SEO Specification) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "LoveQuiz",
+      "url": "https://www.lovequiz.com/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "Découvrez votre compatibilité amoureuse avec notre quiz gratuit de 15 questions. Basé sur la psychologie relationnelle. Résultats instantanés et privés.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "284200",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "featureList": [
+        "Quiz de compatibilité amoureuse approfondi en 15 questions",
+        "Analyse de 4 piliers : Communication, Romance, Conflits, Vision commune",
+        "Calculateur de compatibilité astrologique de couple",
+        "Test d'évaluation des 5 langages de l'amour",
+        "Générateur d'idées de rendez-vous et dates romantiques",
+        "Résultats anonymes, instantanés et sécurisés"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org 2: WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "LoveQuiz",
+      "url": "https://www.lovequiz.com/",
+      "description": "Test de compatibilité amoureuse gratuit basé sur la psychologie des relations",
+      "inLanguage": ["fr-FR", "en-US"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.lovequiz.com/?tab=blog&q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Schema.org 3: Organization Details -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "LoveQuiz",
+      "url": "https://www.lovequiz.com/",
+      "logo": "https://www.lovequiz.com/assets/icons/logo.svg",
+      "sameAs": [
+        "https://www.instagram.com/lovequiz",
+        "https://www.tiktok.com/@lovequiz",
+        "https://twitter.com/lovequiz"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@lovequiz.app",
+        "contactType": "customer service",
+        "availableLanguage": ["French", "English"]
+      }
+    }
+    </script>
+
+    <!-- Schema.org 4: FAQPage (Google Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le test de compatibilité de couple LoveQuiz est-il gratuit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, LoveQuiz est 100% gratuit et accessible immédiatement sans carte bancaire, ni période d'essai, ni abonnement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il créer un compte pour voir les résultats du quiz ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non, aucune inscription ni mot de passe n'est requis. Vos réponses sont strictement anonymes et vos résultats s'affichent instantanément à l'écran."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps prend le test de couple ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le test comporte 15 questions intuitives et se complète en environ 3 minutes, seul(e) ou à deux côte à côte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sur quoi repose le calcul de compatibilité ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'algorithme pondère 4 piliers de la recherche en psychologie relationnelle : la communication émotionnelle, la tendresse et la romance, la gestion bienveillante des désaccords et les projets d'avenir communs."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-off-white text-deep-black antialiased overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
