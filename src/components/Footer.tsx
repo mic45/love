@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import * as Sentry from '@sentry/react';
 import { Language, translations } from '../translations';
 
 interface FooterProps {
@@ -11,18 +10,6 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onNavigate }) => {
   const t = translations[currentLang];
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleTriggerSentryTest = () => {
-    try {
-      Sentry.logger.info('User triggered test error', {
-        action: 'test_error_button_click',
-      });
-    } catch {}
-    try {
-      Sentry.metrics.count('test_counter', 1);
-    } catch {}
-    throw new Error('This is your first error!');
-  };
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -169,15 +156,6 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onNavigate }) => {
             <span>·</span>
             <button onClick={() => handleLink('confidentialite')} className="hover:text-white transition-colors cursor-pointer py-1">
               {t.footer.links.privacy}
-            </button>
-            <span>·</span>
-            <button
-              onClick={handleTriggerSentryTest}
-              className="text-[#666666] hover:text-amber-400 transition-colors cursor-pointer py-1 text-[11px] inline-flex items-center gap-1.5"
-              title="Tester la capture d'erreur Sentry (génère une exception de test)"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Test Sentry</span>
             </button>
           </div>
         </div>
