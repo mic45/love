@@ -58,6 +58,20 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    esbuild: {
+      target: 'es2022',
+      supported: {
+        destructuring: true,
+      },
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        target: 'es2022',
+        supported: {
+          destructuring: true,
+        },
+      },
+    },
     build: {
       target: 'es2022',
       rollupOptions: {
