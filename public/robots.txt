@@ -1,6 +1,24 @@
-# Robots.txt pour LoveQuiz
+# Robots.txt pour LoveQuiz (https://lovequiz.fun)
 User-agent: *
 Allow: /
+Disallow: /api/
 
-# Sitemap
-Sitemap: https://www.lovequiz.com/sitemap.xml
+# Major Search Engines Explicit Rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Canonical Sitemap
+Sitemap: https://lovequiz.fun/sitemap.xml
+Host: https://lovequiz.fun

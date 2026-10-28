@@ -43,7 +43,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
   const getMailtoUrl = () => {
     const subject = encodeURIComponent(`[LoveQuiz] ${getSubjectTitle()} – ${formData.name || 'Visiteur'}`);
     const body = encodeURIComponent(
-      `Bonjour l'équipe LoveQuiz,\n\nNom: ${formData.name}\nEmail: ${formData.email}\nSujet: ${getSubjectTitle()}\n\nMessage:\n${formData.message}\n\n---\nEnvoyé depuis LoveQuiz (https://www.lovequiz.com)`
+      `Bonjour l'équipe LoveQuiz,\n\nNom: ${formData.name}\nEmail: ${formData.email}\nSujet: ${getSubjectTitle()}\n\nMessage:\n${formData.message}\n\n---\nEnvoyé depuis LoveQuiz (https://lovequiz.fun)`
     );
     return `mailto:henrimarchal4@gmail.com?subject=${subject}&body=${body}`;
   };

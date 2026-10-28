@@ -250,7 +250,7 @@ export const downloadSouvenirImage = (data: SouvenirData): Promise<void> => {
     // Date & Website URL
     ctx.fillStyle = '#888888';
     ctx.font = '500 13px Poppins, sans-serif';
-    ctx.fillText(`${data.dateStr} · https://www.lovequiz.com`, width / 2, 1340);
+    ctx.fillText(`${data.dateStr} · https://lovequiz.fun`, width / 2, 1340);
 
     // Export to downloadable PNG
     const link = document.createElement('a');

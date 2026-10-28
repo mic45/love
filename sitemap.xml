@@ -1,71 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- Page d'Accueil Principale -->
+
+  <!-- 1. Page d'Accueil Principale -->
   <url>
-    <loc>https://www.lovequiz.com/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://lovequiz.fun/</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lovequiz.fun/"/>
   </url>
-  
-  <!-- Quiz de Compatibilité 15 Questions -->
+
+  <!-- 2. Quiz Général de Compatibilité 15 Questions -->
   <url>
-    <loc>https://www.lovequiz.com/?tab=quiz</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://lovequiz.fun/?tab=quiz</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/?tab=quiz"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?tab=quiz&amp;lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=quiz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=quiz&amp;lang=en"/>
   </url>
-  
-  <!-- Outils de Couple (Astrologie, 5 Langages, Dates) -->
+
+  <!-- 3. Hub Quiz Thématiques Spécialisés -->
   <url>
-    <loc>https://www.lovequiz.com/?tab=tools</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://lovequiz.fun/?tab=themed</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/?tab=tools"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?tab=tools&amp;lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=themed"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=themed&amp;lang=en"/>
   </url>
-  
-  <!-- Blog Psychologie de Couple -->
   <url>
-    <loc>https://www.lovequiz.com/?tab=blog</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://lovequiz.fun/?tab=themed&amp;theme=cohabitation</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=themed&amp;theme=cohabitation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=themed&amp;theme=cohabitation&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=themed&amp;theme=communication</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=themed&amp;theme=communication"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=themed&amp;theme=communication&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=themed&amp;theme=intimacy</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=themed&amp;theme=intimacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=themed&amp;theme=intimacy&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=themed&amp;theme=finances</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=themed&amp;theme=finances"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=themed&amp;theme=finances&amp;lang=en"/>
+  </url>
+
+  <!-- 4. Outils de Couple (Love Tools) -->
+  <url>
+    <loc>https://lovequiz.fun/?tab=tools</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=tools&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=tools&amp;tool=letters</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=tools&amp;tool=letters"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=tools&amp;tool=letters&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=tools&amp;tool=loveLang</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=tools&amp;tool=loveLang"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=tools&amp;tool=loveLang&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=tools&amp;tool=zodiac</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=tools&amp;tool=zodiac"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=tools&amp;tool=zodiac&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=tools&amp;tool=dates</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=tools&amp;tool=dates"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=tools&amp;tool=dates&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=tools&amp;tool=travel</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=tools&amp;tool=travel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=tools&amp;tool=travel&amp;lang=en"/>
+  </url>
+
+  <!-- 5. Blog Psychologie de Couple -->
+  <url>
+    <loc>https://lovequiz.fun/?tab=blog</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/?tab=blog"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?tab=blog&amp;lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=blog&amp;lang=en"/>
   </url>
-  
-  <!-- À Propos, Mission & Contact -->
   <url>
-    <loc>https://www.lovequiz.com/?tab=about</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://lovequiz.fun/?tab=article&amp;slug=5-secrets-couples-qui-durent</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/?tab=about"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?tab=about&amp;lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=article&amp;slug=5-secrets-couples-qui-durent"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=article&amp;slug=5-secrets-couples-qui-durent&amp;lang=en"/>
   </url>
-  
-  <!-- Mentions Légales -->
   <url>
-    <loc>https://www.lovequiz.com/?tab=mentions</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://lovequiz.fun/?tab=article&amp;slug=desamorcer-dispute-3-minutes</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=article&amp;slug=desamorcer-dispute-3-minutes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=article&amp;slug=desamorcer-dispute-3-minutes&amp;lang=en"/>
   </url>
-  
-  <!-- Politique de Confidentialité RGPD -->
   <url>
-    <loc>https://www.lovequiz.com/?tab=confidentialite</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://lovequiz.fun/?tab=article&amp;slug=regle-des-2-2-2-routine</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=article&amp;slug=regle-des-2-2-2-routine"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=article&amp;slug=regle-des-2-2-2-routine&amp;lang=en"/>
   </url>
-  
+  <url>
+    <loc>https://lovequiz.fun/?tab=article&amp;slug=5-langages-amour-guide-pratique</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=article&amp;slug=5-langages-amour-guide-pratique"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=article&amp;slug=5-langages-amour-guide-pratique&amp;lang=en"/>
+  </url>
+
+  <!-- 6. Pages institutionnelles & légales -->
+  <url>
+    <loc>https://lovequiz.fun/?tab=about</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lovequiz.fun/?tab=about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lovequiz.fun/?tab=about&amp;lang=en"/>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=mentions</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://lovequiz.fun/?tab=confidentialite</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
 </urlset>

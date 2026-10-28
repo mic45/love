@@ -78,6 +78,18 @@ export default function App() {
   // 3. Selected article for detailed reading
   const [selectedArticle, setSelectedArticle] = useState<BlogPost>(BLOG_POSTS[0]);
 
+  // 4. Selected tool state
+  const [selectedTool, setSelectedTool] = useState<'letters' | 'loveLang' | 'zodiac' | 'dates' | 'travel'>(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const tool = params.get('tool');
+      if (tool === 'loveLang' || tool === 'zodiac' || tool === 'dates' || tool === 'letters' || tool === 'travel' || tool === 'voyage') {
+        return (tool === 'voyage' ? 'travel' : tool) as any;
+      }
+    } catch {}
+    return 'letters';
+  });
+
   // Prefetch non-critical routes after initial mobile paint during browser idle
   useEffect(() => {
     const prefetch = () => {
@@ -189,7 +201,96 @@ export default function App() {
 
     const twDesc = document.querySelector('meta[name="twitter:description"]');
     if (twDesc) twDesc.setAttribute('content', currentSeo.desc);
-  }, [activeTab, currentLang, selectedArticle]);
+
+    // Dynamic Canonical URL & OpenGraph URL
+    const baseUrl = typeof window !== 'undefined' && window.location.origin.includes('http')
+      ? window.location.origin
+      : 'https://lovequiz.fun';
+
+    let canonicalPath = '/';
+    if (activeTab === 'quiz') canonicalPath = '/?tab=quiz';
+    else if (activeTab === 'themed') canonicalPath = initialThemedQuizId ? `/?tab=themed&theme=${initialThemedQuizId}` : '/?tab=themed';
+    else if (activeTab === 'tools') canonicalPath = `/?tab=tools&tool=${selectedTool}`;
+    else if (activeTab === 'blog') canonicalPath = '/?tab=blog';
+    else if (activeTab === 'article') canonicalPath = `/?tab=article&slug=${selectedArticle.slug}`;
+    else if (activeTab === 'about') canonicalPath = '/?tab=about';
+    else if (activeTab === 'mentions') canonicalPath = '/?tab=mentions';
+    else if (activeTab === 'confidentialite') canonicalPath = '/?tab=confidentialite';
+
+    const fullCanonical = `${baseUrl}${canonicalPath}${currentLang === 'en' ? (canonicalPath.includes('?') ? '&lang=en' : '?lang=en') : ''}`;
+
+    const canonicalEl = document.querySelector('link[rel="canonical"]');
+    if (canonicalEl) {
+      canonicalEl.setAttribute('href', fullCanonical);
+    }
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', fullCanonical);
+    }
+
+    // Dynamic Contextual Schema.org Structured Data
+    try {
+      let dynamicSchema: object | null = null;
+      if (activeTab === 'article') {
+        dynamicSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          'headline': selectedArticle[currentLang].title,
+          'description': selectedArticle[currentLang].excerpt,
+          'datePublished': '2026-02-14',
+          'dateModified': '2026-10-28',
+          'author': {
+            '@type': 'Person',
+            'name': selectedArticle.author,
+            'jobTitle': currentLang === 'fr' ? selectedArticle.authorRoleFr : selectedArticle.authorRoleEn,
+          },
+          'publisher': {
+            '@type': 'Organization',
+            'name': 'LoveQuiz',
+            'logo': {
+              '@type': 'ImageObject',
+              'url': `${baseUrl}/assets/icons/logo.svg`,
+            },
+          },
+          'mainEntityOfPage': fullCanonical,
+          'inLanguage': currentLang === 'fr' ? 'fr-FR' : 'en-US',
+        };
+      } else if (activeTab === 'quiz' || activeTab === 'themed') {
+        dynamicSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'Quiz',
+          'name': currentSeo.title,
+          'description': currentSeo.desc,
+          'educationalLevel': 'Beginner',
+          'about': {
+            '@type': 'Thing',
+            'name': 'Psychologie de couple et compatibilité amoureuse',
+          },
+          'provider': {
+            '@type': 'Organization',
+            'name': 'LoveQuiz',
+            'url': baseUrl,
+          },
+        };
+      }
+
+      let scriptTag = document.getElementById('dynamic-seo-ld') as HTMLScriptElement | null;
+      if (dynamicSchema) {
+        if (!scriptTag) {
+          scriptTag = document.createElement('script');
+          scriptTag.id = 'dynamic-seo-ld';
+          scriptTag.type = 'application/ld+json';
+          document.head.appendChild(scriptTag);
+        }
+        scriptTag.text = JSON.stringify(dynamicSchema);
+      } else if (scriptTag) {
+        scriptTag.remove();
+      }
+    } catch {
+      // ignore
+    }
+  }, [activeTab, currentLang, selectedArticle, initialThemedQuizId, selectedTool]);
 
   // Persist language on change
   const handleToggleLang = () => {
@@ -243,17 +344,6 @@ export default function App() {
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const [selectedTool, setSelectedTool] = useState<'letters' | 'loveLang' | 'zodiac' | 'dates' | 'travel'>(() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const tool = params.get('tool');
-      if (tool === 'loveLang' || tool === 'zodiac' || tool === 'dates' || tool === 'letters' || tool === 'travel' || tool === 'voyage') {
-        return (tool === 'voyage' ? 'travel' : tool) as any;
-      }
-    } catch {}
-    return 'letters';
-  });
 
   const handleNavigateToTools = (tool: 'letters' | 'loveLang' | 'zodiac' | 'dates' | 'travel' = 'letters') => {
     setSelectedTool(tool);

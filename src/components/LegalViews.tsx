@@ -157,11 +157,11 @@ export const LegalViews: React.FC<LegalViewProps> = ({ type: initialType, curren
                   {isFr ? (
                     <>
                       Le site internet <strong>LoveQuiz</strong> (accessible à l’adresse officielle{' '}
-                      <code>https://www.lovequiz.com</code>) est édité par :
+                      <code>https://lovequiz.fun</code>) est édité par :
                     </>
                   ) : (
                     <>
-                      The <strong>LoveQuiz</strong> website (available at <code>https://www.lovequiz.com</code>) is published by:
+                      The <strong>LoveQuiz</strong> website (available at <code>https://lovequiz.fun</code>) is published by:
                     </>
                   )}
                 </p>
