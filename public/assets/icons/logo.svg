@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B8A"/>
+      <stop offset="100%" stop-color="#FF4D6D"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon container -->
+  <rect x="8" y="10" width="60" height="60" rx="16" fill="url(#coralGrad)" />
+  <!-- Heart symbol -->
+  <path d="M38 52l-2.4-2.18C27 41.04 21.4 35.98 21.4 29.74 21.4 24.68 25.38 20.7 30.44 20.7c2.86 0 5.6 1.33 7.56 3.44 1.96-2.11 4.7-3.44 7.56-3.44 5.06 0 9.04 3.98 9.04 9.04 0 6.24-5.6 11.3-14.2 20.08L38 52z" fill="#FFFFFF"/>
+  <!-- Text Brand -->
+  <text x="82" y="50" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="700" font-size="34" fill="#1A1A1A" letter-spacing="-0.5">Love<tspan fill="#FF6B8A">Quiz</tspan></text>
+</svg>

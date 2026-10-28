@@ -1,0 +1,38 @@
+{
+  "id": "/",
+  "short_name": "LoveQuiz",
+  "name": "LoveQuiz – Test de Compatibilité Amoureuse & Outils Couple",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FFFBF7",
+  "theme_color": "#FF6B8A",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "fr-FR",
+  "description": "Testez votre complicité de couple avec notre quiz gratuit en 15 questions. Basé sur la psychologie positive relationnelle."
+}

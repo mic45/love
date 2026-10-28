@@ -1,0 +1,6 @@
+{
+  "name": "LoveQuiz",
+  "description": "Découvrez votre compatibilité amoureuse avec notre quiz gratuit de 15 questions. Basé sur la psychologie relationnelle. Résultats instantanés et privés.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

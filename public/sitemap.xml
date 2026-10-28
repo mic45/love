@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Page d'Accueil Principale -->
+  <url>
+    <loc>https://www.lovequiz.com/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?lang=en"/>
+  </url>
+  
+  <!-- Quiz de Compatibilité 15 Questions -->
+  <url>
+    <loc>https://www.lovequiz.com/?tab=quiz</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/?tab=quiz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?tab=quiz&amp;lang=en"/>
+  </url>
+  
+  <!-- Outils de Couple (Astrologie, 5 Langages, Dates) -->
+  <url>
+    <loc>https://www.lovequiz.com/?tab=tools</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/?tab=tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?tab=tools&amp;lang=en"/>
+  </url>
+  
+  <!-- Blog Psychologie de Couple -->
+  <url>
+    <loc>https://www.lovequiz.com/?tab=blog</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/?tab=blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?tab=blog&amp;lang=en"/>
+  </url>
+  
+  <!-- À Propos, Mission & Contact -->
+  <url>
+    <loc>https://www.lovequiz.com/?tab=about</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lovequiz.com/?tab=about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lovequiz.com/?tab=about&amp;lang=en"/>
+  </url>
+  
+  <!-- Mentions Légales -->
+  <url>
+    <loc>https://www.lovequiz.com/?tab=mentions</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Politique de Confidentialité RGPD -->
+  <url>
+    <loc>https://www.lovequiz.com/?tab=confidentialite</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+</urlset>
