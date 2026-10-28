@@ -1,19 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Language, translations } from './translations';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomeView } from './components/HomeView';
-import { QuizEngine } from './components/QuizEngine';
-import { ToolsView } from './components/ToolsView';
-import { BlogView } from './components/BlogView';
-import { ArticleView } from './components/ArticleView';
-import { AboutView } from './components/AboutView';
 import { MobileBottomNav } from './components/MobileBottomNav';
-import { LegalViews } from './components/LegalViews';
-import { PwaInstallPrompt } from './components/PwaInstallPrompt';
-import { HeartParticles } from './components/HeartParticles';
-import { ThemedQuizEngine } from './components/ThemedQuizEngine';
 import { BLOG_POSTS, BlogPost } from './data/blogData';
+
+// Code-splitting non-critical views to optimize mobile initial bundle size & LCP/FCP
+const QuizEngine = lazy(() => import('./components/QuizEngine').then(m => ({ default: m.QuizEngine })));
+const ThemedQuizEngine = lazy(() => import('./components/ThemedQuizEngine').then(m => ({ default: m.ThemedQuizEngine })));
+const ToolsView = lazy(() => import('./components/ToolsView').then(m => ({ default: m.ToolsView })));
+const BlogView = lazy(() => import('./components/BlogView').then(m => ({ default: m.BlogView })));
+const ArticleView = lazy(() => import('./components/ArticleView').then(m => ({ default: m.ArticleView })));
+const AboutView = lazy(() => import('./components/AboutView').then(m => ({ default: m.AboutView })));
+const LegalViews = lazy(() => import('./components/LegalViews').then(m => ({ default: m.LegalViews })));
+const PwaInstallPrompt = lazy(() => import('./components/PwaInstallPrompt').then(m => ({ default: m.PwaInstallPrompt })));
+const HeartParticles = lazy(() => import('./components/HeartParticles').then(m => ({ default: m.HeartParticles })));
+
+const ViewSkeleton = () => (
+  <div className="max-w-4xl mx-auto px-4 py-16 text-center animate-pulse">
+    <div className="w-16 h-16 bg-powder/70 rounded-full mx-auto mb-4"></div>
+    <div className="h-6 bg-powder/60 rounded-full max-w-xs mx-auto mb-3"></div>
+    <div className="h-4 bg-powder/40 rounded-full max-w-md mx-auto"></div>
+  </div>
+);
 
 export default function App() {
   // 1. Language state with localStorage persistence
@@ -67,6 +77,21 @@ export default function App() {
 
   // 3. Selected article for detailed reading
   const [selectedArticle, setSelectedArticle] = useState<BlogPost>(BLOG_POSTS[0]);
+
+  // Prefetch non-critical routes after initial mobile paint during browser idle
+  useEffect(() => {
+    const prefetch = () => {
+      import('./components/QuizEngine');
+      import('./components/ToolsView');
+    };
+    if (typeof window !== 'undefined') {
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(prefetch, { timeout: 3500 });
+      } else {
+        setTimeout(prefetch, 2500);
+      }
+    }
+  }, []);
 
   // 4. Dismissible top banner for mobile space optimization
   const [showTopBanner, setShowTopBanner] = useState(true);
@@ -283,95 +308,99 @@ export default function App() {
 
       {/* Evaporating Heart Particles (active on romantic pages: Home, Quiz, Themed, and Couple Tools) */}
       {(activeTab === 'home' || activeTab === 'quiz' || activeTab === 'themed' || activeTab === 'tools') && (
-        <HeartParticles
-          density={activeTab === 'quiz' || activeTab === 'themed' ? 'festive' : 'subtle'}
-          interactive={true}
-        />
+        <Suspense fallback={null}>
+          <HeartParticles
+            density={activeTab === 'quiz' || activeTab === 'themed' ? 'festive' : 'subtle'}
+            interactive={true}
+          />
+        </Suspense>
       )}
 
       {/* Main Content View Switcher */}
       <main className="flex-1 relative">
-        {activeTab === 'home' && (
-          <HomeView
-            currentLang={currentLang}
-            onStartQuiz={() => handleNavigate('quiz')}
-            onExploreTools={handleNavigateToTools}
-            onNavigateToBlog={() => handleNavigate('blog')}
-            onNavigateToThemed={handleNavigateToThemed}
-          />
-        )}
+        <Suspense fallback={<ViewSkeleton />}>
+          {activeTab === 'home' && (
+            <HomeView
+              currentLang={currentLang}
+              onStartQuiz={() => handleNavigate('quiz')}
+              onExploreTools={handleNavigateToTools}
+              onNavigateToBlog={() => handleNavigate('blog')}
+              onNavigateToThemed={handleNavigateToThemed}
+            />
+          )}
 
-        {activeTab === 'quiz' && (
-          <QuizEngine
-            currentLang={currentLang}
-            onNavigateToTools={() => handleNavigateToTools('letters')}
-            onNavigateToThemed={() => handleNavigate('themed')}
-          />
-        )}
+          {activeTab === 'quiz' && (
+            <QuizEngine
+              currentLang={currentLang}
+              onNavigateToTools={() => handleNavigateToTools('letters')}
+              onNavigateToThemed={() => handleNavigate('themed')}
+            />
+          )}
 
-        {activeTab === 'themed' && (
-          <ThemedQuizEngine
-            currentLang={currentLang}
-            onNavigateToGeneralQuiz={() => handleNavigate('quiz')}
-            initialThemeId={initialThemedQuizId}
-          />
-        )}
+          {activeTab === 'themed' && (
+            <ThemedQuizEngine
+              currentLang={currentLang}
+              onNavigateToGeneralQuiz={() => handleNavigate('quiz')}
+              initialThemeId={initialThemedQuizId}
+            />
+          )}
 
-        {activeTab === 'tools' && (
-          <ToolsView
-            currentLang={currentLang}
-            onNavigateToQuiz={() => handleNavigate('quiz')}
-            initialTool={selectedTool}
-          />
-        )}
+          {activeTab === 'tools' && (
+            <ToolsView
+              currentLang={currentLang}
+              onNavigateToQuiz={() => handleNavigate('quiz')}
+              initialTool={selectedTool}
+            />
+          )}
 
-        {activeTab === 'blog' && (
-          <BlogView
-            currentLang={currentLang}
-            onSelectArticle={handleOpenArticle}
-          />
-        )}
+          {activeTab === 'blog' && (
+            <BlogView
+              currentLang={currentLang}
+              onSelectArticle={handleOpenArticle}
+            />
+          )}
 
-        {activeTab === 'article' && (
-          <ArticleView
-            post={selectedArticle}
-            currentLang={currentLang}
-            onBack={() => handleNavigate('blog')}
-            onTakeQuiz={() => handleNavigate('quiz')}
-          />
-        )}
+          {activeTab === 'article' && (
+            <ArticleView
+              post={selectedArticle}
+              currentLang={currentLang}
+              onBack={() => handleNavigate('blog')}
+              onTakeQuiz={() => handleNavigate('quiz')}
+            />
+          )}
 
-        {activeTab === 'about' && (
-          <AboutView
-            currentLang={currentLang}
-            onNavigateToQuiz={() => handleNavigate('quiz')}
-            onNavigateToTools={() => handleNavigate('tools')}
-          />
-        )}
+          {activeTab === 'about' && (
+            <AboutView
+              currentLang={currentLang}
+              onNavigateToQuiz={() => handleNavigate('quiz')}
+              onNavigateToTools={() => handleNavigate('tools')}
+            />
+          )}
 
-        {activeTab === 'mentions' && (
-          <LegalViews
-            type="mentions"
-            currentLang={currentLang}
-            onBackHome={() => handleNavigate('home')}
-          />
-        )}
+          {activeTab === 'mentions' && (
+            <LegalViews
+              type="mentions"
+              currentLang={currentLang}
+              onBackHome={() => handleNavigate('home')}
+            />
+          )}
 
-        {activeTab === 'confidentialite' && (
-          <LegalViews
-            type="confidentialite"
-            currentLang={currentLang}
-            onBackHome={() => handleNavigate('home')}
-          />
-        )}
+          {activeTab === 'confidentialite' && (
+            <LegalViews
+              type="confidentialite"
+              currentLang={currentLang}
+              onBackHome={() => handleNavigate('home')}
+            />
+          )}
 
-        {activeTab === '404' && (
-          <LegalViews
-            type="404"
-            currentLang={currentLang}
-            onBackHome={() => handleNavigate('home')}
-          />
-        )}
+          {activeTab === '404' && (
+            <LegalViews
+              type="404"
+              currentLang={currentLang}
+              onBackHome={() => handleNavigate('home')}
+            />
+          )}
+        </Suspense>
       </main>
 
       {/* Deep Black Footer */}
@@ -388,7 +417,9 @@ export default function App() {
       />
 
       {/* Progressive Web App (PWA) Install Prompt */}
-      <PwaInstallPrompt currentLang={currentLang} />
+      <Suspense fallback={null}>
+        <PwaInstallPrompt currentLang={currentLang} />
+      </Suspense>
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Language, translations } from '../translations';
 import heroCoupleImg from '../assets/images/hero_couple_love_1790262271844.jpg';
+import heroCoupleWebp from '../assets/images/hero_couple_love_1790262271844.webp';
+import heroCoupleMobileWebp from '../assets/images/hero_couple_love_mobile.webp';
 import coupleQuizImg from '../assets/images/couple_quiz_journey_1790262285021.jpg';
-import romanticDatesImg from '../assets/images/romantic_date_ideas_1790262308114.jpg';
+import coupleQuizWebp from '../assets/images/couple_quiz_journey_1790262285021.webp';
 import {
   FeatureIconHeart,
   FeatureIconShield,
@@ -106,12 +108,19 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
               {/* Card Container */}
               <div className="relative rounded-3xl overflow-hidden border-2 border-powder bg-white shadow-xl img-hover">
-                <img
-                  src={heroCoupleImg}
-                  alt={currentLang === 'fr' ? 'Couple complice et amoureux' : 'Happy affectionate couple'}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-[320px] sm:h-[400px] object-cover object-center"
-                />
+                <picture>
+                  <source media="(max-width: 640px)" srcSet={heroCoupleMobileWebp} type="image/webp" />
+                  <source srcSet={heroCoupleWebp} type="image/webp" />
+                  <img
+                    src={heroCoupleImg}
+                    alt={currentLang === 'fr' ? 'Couple complice et amoureux' : 'Happy affectionate couple'}
+                    fetchPriority="high"
+                    decoding="async"
+                    width={600}
+                    height={400}
+                    className="w-full h-[320px] sm:h-[400px] object-cover object-center"
+                  />
+                </picture>
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-black/60 via-transparent to-transparent pointer-events-none"></div>
 
                 {/* Floating Top Badge */}
@@ -242,7 +251,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* 4. HOW IT WORKS */}
-      <section className="bg-white py-12 sm:py-16 border-y border-powder">
+      <section className="bg-white py-12 sm:py-16 border-y border-powder content-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <div className="text-xs font-bold tracking-wider uppercase text-coral mb-2">
@@ -305,12 +314,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {/* Illustration Right */}
             <div className="md:col-span-5 lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden border border-powder shadow-lg img-hover bg-white p-3">
-                <img
-                  src={coupleQuizImg}
-                  alt={currentLang === 'fr' ? 'Parcours du quiz de couple' : 'Couple taking the quiz together'}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-[260px] sm:h-[320px] object-cover rounded-2xl"
-                />
+                <picture>
+                  <source srcSet={coupleQuizWebp} type="image/webp" />
+                  <img
+                    src={coupleQuizImg}
+                    alt={currentLang === 'fr' ? 'Parcours du quiz de couple' : 'Couple taking the quiz together'}
+                    loading="lazy"
+                    decoding="async"
+                    width={480}
+                    height={320}
+                    className="w-full h-[260px] sm:h-[320px] object-cover rounded-2xl"
+                  />
+                </picture>
                 <div className="pt-3 pb-1 text-center">
                   <span className="text-xs font-bold text-coral uppercase tracking-wider block">
                     {currentLang === 'fr' ? '100% Anonyme & Sans inscription' : '100% Anonymous & No Sign-up'}
@@ -326,7 +341,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* 5. MODES (POUR TOUS LES PARCOURS) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 content-auto">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <div className="text-xs font-bold tracking-wider uppercase text-coral mb-2">
             {t.modes.tag}
@@ -400,7 +415,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* 5b. SPECIALIZED THEMED QUIZZES SHOWCASE */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 content-auto">
         <div className="bg-white rounded-3xl border border-powder p-6 sm:p-10 lg:p-12 shadow-sm space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-powder/70 pb-6">
             <div className="space-y-2 max-w-xl">
@@ -577,7 +592,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* 6b. AI LOVE LETTER SPOTLIGHT BANNER */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 content-auto">
         <div className="bg-[#FFFDF9] rounded-3xl border-2 border-powder p-6 sm:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
           <div className="space-y-3 text-left max-w-xl">
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-coral">
@@ -615,7 +630,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* 6c. SPECIAL COUPLE TRAVEL DEALS & PROMOTIONS SHOWCASE */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 content-auto">
         <div className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-blue-500/25 relative overflow-hidden">
           {/* Subtle atmospheric glow */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -684,7 +699,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* 7. FINAL CTA BANNER */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 content-auto">
         <div className="bg-gradient-to-br from-coral to-coral-dark text-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-14 text-center shadow-xl relative overflow-hidden">
           {/* Subtle Floating Shapes */}
           <div className="absolute top-4 left-6 opacity-20 text-3xl sm:text-4xl animate-float">❤️</div>

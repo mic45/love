@@ -31,19 +31,14 @@ if (typeof Node !== 'undefined' && Node.prototype) {
   };
 }
 
-// Initialize Sentry monitoring with filter for third-party DOM extension mutations
+// Initialize Sentry monitoring for real-time error capture without blocking mobile main-thread
 Sentry.init({
   dsn: 'https://1ad3b97fbc7ef63465220fc5a3137c2b@o4512011007623168.ingest.de.sentry.io/4512220649488464',
   integrations: [
     Sentry.browserTracingIntegration(),
-    Sentry.replayIntegration(),
   ],
-  // Tracing: capture 100% of transactions for comprehensive diagnostics
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 0.2,
   tracePropagationTargets: ['localhost', /^\/api/],
-  // Session Replay
-  replaysSessionSampleRate: 0.1,
-  replaysOnErrorSampleRate: 1.0,
   // Ignore known DOM manipulation errors caused by third-party browser extensions (Google Translate, Grammarly, etc.)
   ignoreErrors: [
     "Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.",

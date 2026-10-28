@@ -88,7 +88,8 @@ export const HeartParticles: React.FC<HeartParticlesProps> = ({
 
     window.addEventListener('resize', handleResize);
 
-    const maxParticles = density === 'festive' ? 32 : 18;
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+    const maxParticles = density === 'festive' ? (isMobile ? 12 : 32) : (isMobile ? 6 : 18);
     const particles: HeartParticle[] = [];
     let particleIdSeq = 0;
 
@@ -121,8 +122,8 @@ export const HeartParticles: React.FC<HeartParticlesProps> = ({
       };
     };
 
-    // Initialize with a staggered distribution so they don't all rise at once
-    const initialCount = density === 'festive' ? 16 : 9;
+    // Initialize with a lighter distribution on mobile
+    const initialCount = density === 'festive' ? (isMobile ? 6 : 16) : (isMobile ? 3 : 9);
     for (let i = 0; i < initialCount; i++) {
       const p = createParticle(
         Math.random() * width,
@@ -139,7 +140,7 @@ export const HeartParticles: React.FC<HeartParticlesProps> = ({
       const clientX = e.clientX ?? width / 2;
       const clientY = e.clientY ?? height / 2;
 
-      const burstCount = 4 + Math.floor(Math.random() * 3);
+      const burstCount = 3 + Math.floor(Math.random() * 3);
       for (let i = 0; i < burstCount; i++) {
         const spreadX = clientX + (Math.random() - 0.5) * 40;
         const spreadY = clientY + (Math.random() - 0.5) * 24;
@@ -155,10 +156,14 @@ export const HeartParticles: React.FC<HeartParticlesProps> = ({
 
     // Animation loop
     const render = () => {
+      if (document.hidden) {
+        animationFrameId = requestAnimationFrame(render);
+        return;
+      }
       ctx.clearRect(0, 0, width, height);
 
-      // Replenish ambient particles
-      if (particles.length < maxParticles && Math.random() < 0.12) {
+      // Replenish ambient particles smoothly
+      if (particles.length < maxParticles && Math.random() < (isMobile ? 0.05 : 0.12)) {
         particles.push(createParticle());
       }
 

@@ -86,6 +86,24 @@ export default defineConfig(() => {
           about: path.resolve(__dirname, 'about.html'),
           notFound: path.resolve(__dirname, '404.html'),
         },
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('react') || id.includes('react-dom')) {
+                return 'vendor-react';
+              }
+              if (id.includes('@sentry')) {
+                return 'vendor-sentry';
+              }
+              if (id.includes('lucide-react')) {
+                return 'vendor-lucide';
+              }
+              if (id.includes('canvas-confetti')) {
+                return 'vendor-confetti';
+              }
+            }
+          },
+        },
       },
     },
     server: {

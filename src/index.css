@@ -353,6 +353,11 @@
 }
 
 @layer utilities {
+  .content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 400px;
+  }
+
   .animate-float {
     animation: floatAnimation 3s ease-in-out infinite;
   }
